@@ -15,8 +15,7 @@
 #  Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
 
 if [ "$1" = "uninstall" ]; then
-	rm -f /usr/bin/sparky-quick-mp3
-	rm -f /usr/bin/sparky-quick-mp4
+	rm -f /usr/bin/sparky-tube
 	rm -f /usr/share/applications/sparky-tube-mp3.desktop
 	rm -f /usr/share/applications/sparky-tube-mp4.desktop
 	rm -rf /usr/share/sparky/sparky-tube

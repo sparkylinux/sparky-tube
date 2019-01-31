@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Sparky Tube Video
+GenericName=Sparky Tube Video
+Comment=Download videos
+Comment[pl]=Pobierz wideo
+Comment[pt_BR]=Baixar vídeos
+Type=Application
+Terminal=false
+Exec=/usr/bin/sparky-tube video
+Icon=multimedia-video-player
+Keywords=video;internet;download;youtube
+Categories=GTK;AudioVideo;Player;Video;

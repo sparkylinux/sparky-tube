@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Sparky Tube Audio
+GenericName=Sparky Tube Audio
+Comment=Download videos to Audio
+Comment[pl]=Pobierz wideo do Audio
+Comment[pt_BR]=Baixar vídeos em Audio
+Type=Application
+Terminal=false
+Exec=/usr/bin/sparky-tube audio
+Icon=multimedia-audio-player
+Keywords=video;internet;download;youtube
+Categories=GTK;AudioVideo;Player;Video;
