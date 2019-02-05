@@ -1,11 +1,15 @@
 #!/bin/bash
 
 # Create by Elton 2019/01/24
-# Last update 2019/02/01 by pavroo
+# Added a patch of MUSIC & VIDEO dirs by Sajmon
+# Last update 2019/02/05 by pavroo
+# License: GNU GPL 3 
 
 # get default's locale file
 DEFLOCDIR="/usr/share/sparky/sparky-tube"
-if [ "`cat /etc/default/locale | grep pl`" != "" ]; then
+if [ "`cat /etc/default/locale | grep fr`" != "" ]; then
+. $DEFLOCDIR/fr
+elif [ "`cat /etc/default/locale | grep pl`" != "" ]; then
 . $DEFLOCDIR/pl
 elif [ "`cat /etc/default/locale | grep pt_BR`" != "" ]; then
 . $DEFLOCDIR/pt_BR
@@ -20,6 +24,7 @@ IMAGETUBE="--window-icon=download --image=download"
 FORM="--form"
 INFO="--info"
 PROGRESS="--progress --pulsate --auto-close --no-buttons --auto-kill --text="
+PROGRESSTEXT="--progress-text="
 FIELD="--field="
 TXT="--text="
 BUTTONOK="--button=Ok!gtk-ok:0"
@@ -30,6 +35,8 @@ SIZEW="--width=450"
 SIZEM="--width=450 --height=300"
 SIZEDIR="--width=750 --height=600"
 MENU="--list --column=Num --column=Info"
+MUSICSAVEPATH=$(xdg-user-dir MUSIC)
+VIDEOSAVEPATH=$(xdg-user-dir VIDEOS)
 
 if [ "$1" = "audio" ]
 then
@@ -71,7 +78,7 @@ then
 			echo "sparky-xterm is missing... Exiting..."
 			exit 1
 		fi
-		$SPARKYXTERM "sudo apt-get install youtube-dl"		
+		$SPARKYXTERM "sudo apt-get install youtube-dl -y"		
 	fi	
 fi
 
@@ -171,9 +178,14 @@ then
 
 	if [ "$1" = "audio" ]
 	then
-		DIR=$($GUI"$TITLETEXT" $IMAGEA $SIZEW $FORM $TXT"$LOCAL3\n" $FIELD"Local:":DIR $BUTTONOK | cut -d "|" -f1)
+		if [ -z $MUSICSAVEPATH ]
+		then
+			DIR=$($GUI"$TITLETEXT" $IMAGEA $SIZEW $FORM $TXT"$LOCAL3\n" $FIELD"Local:":DIR $BUTTONOK | cut -d "|" -f1)
+		else
+			DIR=$MUSICSAVEPATH
+		fi
 		cd $DIR		
-		youtube-dl -o '%(title)s.%(ext)s' --extract-audio --audio-format $AUDIOFORM --audio-quality 0 $URL | BAR=$($GUI"$TITLETEXT" $IMAGEA $SIZEW $PROGRESS"$LOCAL5")
+		youtube-dl -o '%(title)s.%(ext)s' --extract-audio --audio-format $AUDIOFORM --audio-quality 0 $URL | BAR=$($GUI"$TITLETEXT" $IMAGEA $SIZEW $PROGRESS"$LOCAL5" $PROGRESSTEXT"$LOCAL17")
 	
 		$GUI"$TITLETEXT" $IMAGEA $SIZEW $INFO $TXT"$LOCAL11" $BUTTONOK
 	
@@ -190,9 +202,14 @@ then
 
 	elif [ "$1" = "video" ]
 	then
-		DIR=$($GUI"$TITLETEXT" $IMAGEV $SIZEW $FORM $TXT"$LOCAL3\n" $FIELD"Local:":DIR $BUTTONOK | cut -d "|" -f1)
+		if [ -z $VIDEOSAVEPATH ]
+		then
+			DIR=$($GUI"$TITLETEXT" $IMAGEV $SIZEW $FORM $TXT"$LOCAL3\n" $FIELD"Local:":DIR $BUTTONOK | cut -d "|" -f1)
+		else
+			DIR=$VIDEOSAVEPATH
+		fi
 		cd $DIR
-		youtube-dl -f $VIDEOFORM -o '%(title)s.%(ext)s' $URL | BAR=$($GUI"$TITLETEXT" $IMAGEV $SIZEW $PROGRESS"$LOCAL5")
+		youtube-dl -f $VIDEOFORM -o '%(title)s.%(ext)s' $URL | BAR=$($GUI"$TITLETEXT" $IMAGEV $SIZEW $PROGRESS"$LOCAL5" $PROGRESSTEXT"$LOCAL17")
 	
 		$GUI"$TITLETEXT" $IMAGEV $SIZEW $INFO $TXT"$LOCAL6" $BUTTONOK
 	

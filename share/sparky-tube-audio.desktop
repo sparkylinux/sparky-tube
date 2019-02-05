@@ -2,6 +2,7 @@
 Name=Sparky Tube Audio
 GenericName=Sparky Tube Audio
 Comment=Download videos to Audio
+Comment[fr]=Téléchargement de vidéos en Audio
 Comment[pl]=Pobierz wideo do Audio
 Comment[pt_BR]=Baixar vídeos em Audio
 Type=Application

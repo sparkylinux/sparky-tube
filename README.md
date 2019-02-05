@@ -25,6 +25,7 @@ ffmpeg
 grep
 sparky-xterm
 sudo
+xdg-user-dirs
 xdg-utils
 yad
 youtube-dl
