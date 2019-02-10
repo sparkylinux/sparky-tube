@@ -1,5 +1,5 @@
 Sparky Tube
-Download a video file from a web site and convert it to MP3 and MP4 output file.
+Download a video file from a web site and convert it to audio or video output file.
 
 Copyright (C) 2019 Elton Fabricio Ferreira & Paweł Pijanowski
 

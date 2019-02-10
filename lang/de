@@ -1,0 +1,22 @@
+# German localization file for Sparky Tube by Sajmon
+# Last update 2019/02/10 by pavroo
+LOCAL1="\nDas youtube-dl-Paket ist nicht installiert.... \n\n Möchten Sie es jetzt installieren?"
+LOCAL2="\nVideo link kopieren und einfügen:\n"
+LOCAL3="\nWählen Sie einen Ort zum Speichern der Datei aus:"
+LOCAL4="\nDie von Ihnen eingegebene URL ist falsch!\n Bitte überprüfen Sie dies und versuchen Sie es erneut!\n\n Beenden..."
+LOCAL5="Herunterladen und Konvertieren..."
+LOCAL6="\nIhre Videodatei wurde korrekt gespeichert!"
+LOCAL7="\nMöchten Sie das Video abspielen?"
+LOCAL8="\nWählen Sie eine Videodatei aus:"
+LOCAL9="Ja"
+LOCAL10="Nein"
+LOCAL11="\nIhre Audiodatei wurde korrekt gespeichert!"
+LOCAL12="\nMöchten Sie die Audiodatei abspielen?"
+LOCAL13="\nEine Audiodatei auswählen:"
+LOCAL14="Audio-Ausgabeformat auswählen:"
+LOCAL15="Video-Ausgabeformat auswählen:"
+LOCAL16="Du hast keine URL eingegeben!\n\n Beenden..."
+LOCAL17="Bitte warten Sie, bis es fertig ist..."
+#
+#Comment[de]=Videos herunterladen
+#Comment[de]=Videos als Audio herunterladen
