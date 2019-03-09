@@ -2,6 +2,7 @@ Sparky Tube
 Download a video file from a web site and convert it to audio or video output file.
 
 Copyright (C) 2019 Elton Fabricio Ferreira & Paweł Pijanowski
+Contributors: Elton, Paweł, Sajmon
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -18,15 +19,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 Dependencies:
 -------------
-apt
 coreutils
 curl
-ffmpeg
+ffmpeg | vlc | kmplayer | gmplayer | mpv | smplayer | totem
 grep
-sparky-xterm
-sudo
 xdg-user-dirs
-xdg-utils
 yad
 youtube-dl
 

@@ -2,23 +2,33 @@
 
 # Create by Elton 2019/01/24
 # Added a patch of MUSIC & VIDEO dirs by Sajmon
-# Last update 2019/02/10 by pavroo
+# rewritten by Sajmon 2019/03/02
+# Last update 2019/02/06 by Sajmon
 # License: GNU GPL 3 
 
 # get default's locale file
 DEFLOCDIR="/usr/share/sparky/sparky-tube"
-if [ "`cat /etc/default/locale | grep de`" != "" ]; then
+if grep -Eqs 'de' /etc/default/locale; then
 . $DEFLOCDIR/de
-elif [ "`cat /etc/default/locale | grep fr`" != "" ]; then
-. $DEFLOCDIR/fr
-elif [ "`cat /etc/default/locale | grep pl`" != "" ]; then
+elif grep -Eqs 'fr' /etc/default/locale; then
+. $DEFLOCDIR/fr  
+elif grep -Eqs 'pl' /etc/default/locale; then
 . $DEFLOCDIR/pl
-elif [ "`cat /etc/default/locale | grep pt_BR`" != "" ]; then
+elif grep -Eqs 'pt_BR' /etc/default/locale; then
 . $DEFLOCDIR/pt_BR
 else
 . $DEFLOCDIR/en
 fi
 
+PLAYERSLIST="ffplay"
+for i in kmplayer gmplayer mpv smplayer totem vlc;do
+if [ ! -z $(which $i) ];then
+PLAYERSLIST="$PLAYERSLIST,$i"
+fi;done
+
+TITLETEXT="Sparky Tube"
+TITLETEXTV="Sparky Tube Video"
+TITLETEXTA="Sparky Tube Audio"
 GUI="yad --center --image-on-top --title="
 IMAGEA="--window-icon=multimedia-audio-player --image=multimedia-audio-player"
 IMAGEV="--window-icon=multimedia-video-player --image=multimedia-video-player"
@@ -30,202 +40,79 @@ PROGRESSTEXT="--progress-text="
 FIELD="--field="
 TXT="--text="
 BUTTONOK="--button=Ok!gtk-ok:0"
-BTNPLAY="--button=$LOCAL9!gtk-ok:0 --button=$LOCAL10!cancel:1 "
+BTNPLAY="--button=$LOCAL9!gtk-ok:0 --button=$LOCAL10!cancel:1"
 FILEAUDIO="--file"
 FILEVIDEO="--file"
 SIZEW="--width=450"
-SIZEM="--width=450 --height=300"
-SIZEDIR="--width=750 --height=600"
-MENU="--list --column=Num --column=Info"
+SIZEM="--width=500 --height=250"
+SIZEDIR="--width=850 --height=600"
 MUSICSAVEPATH=$(xdg-user-dir MUSIC)
 VIDEOSAVEPATH=$(xdg-user-dir VIDEOS)
 
-if [ "$1" = "audio" ]
-then
-	TITLETEXT="Sparky Tube Audio"
-elif [ "$1" = "video" ]
-then
-	TITLETEXT="Sparky Tube Video"
-else
-	echo ""
-	echo "sparky-tube usage is as follows:"
-	echo ""
-	echo "sparky-tube audio"
-	echo "to download a video and convert it to an audio file"
-	echo "supported audio output formats are:"
-	echo "acc, flac, mp3, m4a, opus, ogg, wav"
-	echo ""	
-	echo "or"
-	echo ""
-	echo "sparky-tube video"
-	echo "to download a video and convert it to a video file"
-	echo "supported video output formats are:"
-	echo "avi, flv, mkv, mp4, ogg"
-	echo ""
+
+YOUDOWN=$($GUI"$TITLETEXT" $SIZEM $TXT"$LOCAL2" \
+$IMAGETUBE $FORM --item-separator="," \
+--button=Ok \
+$FIELD"<b>URL</b>:" \
+$FIELD"$LOCAL14":CBE \
+$FIELD"$LOCAL15":CBE \
+$FIELD"$LOCAL18":CHK \
+"" "audio:mp3,audio:aac,audio:flac,audio:m4a,audio:opus,audio:ogg,audio:wav,video:mp4,video:avi,video:flv,video:mkv,video:ogg" "$PLAYERSLIST")
+
+#url
+URL=$(echo $YOUDOWN | cut -d'|' -f1)
+#av players
+PLAYER=$(echo $YOUDOWN | cut -d'|' -f3)
+#audio / video
+AVFORMAT=$(echo $YOUDOWN | cut -d'|' -f2 | cut -d: -f1)
+#
+PLAYFORMAT=$(echo $YOUDOWN | cut -d'|' -f2 | cut -d: -f2)
+#play checkbox true/false
+PLAY=$(echo $YOUDOWN | cut -d'|' -f4)
+
+    if [ -z $URL ];then
+	    $GUI"$TITLETEXT" $IMAGETUBE $SIZEW $INFO $TXT"$LOCAL16" $BUTTONOK
 	exit 1
-fi
+    fi
 
-# check is youtube-dl installed
-if [ ! -e /usr/bin/youtube-dl ] 
-then	
-	INSTALL=$($GUI"$TITLETEXT" $IMAGETUBE $SIZEW $INFO $TXT"$LOCAL1")
-	if [ "$?" != 0 ]
-	then
-		exit 1
-	else
-		if [ -f /usr/bin/sparky-xterm ]
-		then
-			SPARKYXTERM="/usr/bin/sparky-xterm"
-		else
-			echo "sparky-xterm is missing... Exiting..."
-			exit 1
-		fi
-		$SPARKYXTERM "sudo apt-get install youtube-dl -y"		
-	fi	
-fi
+ CHECKURL=$(curl -o /dev/null --silent --head --write-out '%{http_code}' "$URL")
 
-# paste an url
-URL=$($GUI"$TITLETEXT" $IMAGETUBE $SIZEW $FORM $TXT"$LOCAL2\n" $FIELD"<b>URL</b>:" $BUTTONOK | cut -d "|" -f1)
-if [ "$URL" = "" ]
-then
-	$GUI"$TITLETEXT" $IMAGETUBE $SIZEW $INFO $TXT"$LOCAL16" $BUTTONOK
-	exit 1
-fi
+    if [ ! $CHECKURL -eq 200 ];then
+        $GUI"$TITLETEXT" $IMAGETUBE $SIZEW $INFO $TXT"$LOCAL4" $BUTTONOK
+    exit 1
+    fi
 
-# choose an audio output form
-if [ "$1" = "audio" ]
-then
-	CHOICES=`$GUI"$TITLETEXT" $IMAGEA $SIZEM $MENU $BUTTONOK $TXT"$LOCAL14:" \
-01 "aac" \
-02 "flac" \
-03 "mp3" \
-04 "m4a" \
-05 "opus" \
-06 "ogg" \
-07 "wav"`
+	    if [ "$PLAYFORMAT" = "avi" ]
+	    then
+		    VIDEOFORM="bestvideo+bestaudio/best --recode-video avi"
+	    elif [ "$PLAYFORMAT" = "flv" ]
+	    then
+		    VIDEOFORM="bestvideo+bestaudio/best --recode-video flv"
+	    elif [ "$PLAYFORMAT" = "mkv" ]
+	    then
+		    VIDEOFORM="bestvideo+bestaudio/best --merge-output-format mkv"
+	    elif [ "$PLAYFORMAT" = "mp4" ]
+	    then
+		    VIDEOFORM="bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best --merge-output-format mp4"
+	    elif [ "$PLAYFORMAT" = "ogg" ]
+	    then
+		    VIDEOFORM="bestvideo+bestaudio/best --recode-video ogg"
+	    else
+		    VIDEOFORM="best"
+	    fi
 
-	if [ "$?" = "0" ]
-	then
-		CHOICE=`echo $CHOICES | cut -d "|" -f 1`
-	else
-		exit 1
-	fi
+    if [ $AVFORMAT = "audio" ];then
+        cd $MUSICSAVEPATH
+        youtube-dl -o '%(title)s.%(ext)s' --extract-audio --audio-format $PLAYFORMAT --audio-quality 0 $URL | BAR=$($GUI"$TITLETEXTA" $IMAGEA $SIZEW $PROGRESS"$MUSICSAVEPATH\n$LOCAL5" $PROGRESSTEXT"$LOCAL17")
+    if [ $PLAY = "TRUE" ];then
+        FILE=$($GUI"$TITLETEXT" $IMAGEA $SIZEDIR $FORM $TXT"$LOCAL13\n" $FILEAUDIO --file-filter='*.aac *.flac *.mp3 *.m4a *.opus *.ogg *.wav' $BNTPLAY | cut -d "|" -f1)
+        $PLAYER "$FILE" || exit
+    fi;fi
 
-	if [ "$CHOICE" = "01" ]
-	then
-		AUDIOFORM="aac"
-	elif [ "$CHOICE" = "02" ]
-	then
-		AUDIOFORM="flac"
-	elif [ "$CHOICE" = "03" ]
-	then
-		AUDIOFORM="mp3"
-	elif [ "$CHOICE" = "04" ]
-	then
-		AUDIOFORM="m4a"
-	elif [ "$CHOICE" = "05" ]
-	then
-		AUDIOFORM="opus"
-	elif [ "$CHOICE" = "06" ]
-	then
-		AUDIOFORM="vorbis"
-	elif [ "$CHOICE" = "07" ]
-	then
-		AUDIOFORM="wav"
-	else
-		AUDIOFORM="mp3"
-	fi
-
-elif [ "$1" = "video" ]
-then
-	CHOICES=`$GUI"$TITLETEXT" $IMAGEV $SIZEM $MENU $BUTTONOK $TXT"$LOCAL15:" \
-01 "avi" \
-02 "flv" \
-03 "mkv" \
-04 "mp4" \
-05 "ogg"`
-
-	if [ "$?" = "0" ]
-	then
-		CHOICE=`echo $CHOICES | cut -d "|" -f 1`
-	else
-		exit 1
-	fi
-
-	if [ "$CHOICE" = "01" ]
-	then
-		VIDEOFORM="bestvideo+bestaudio/best --recode-video avi"
-	elif [ "$CHOICE" = "02" ]
-	then
-		VIDEOFORM="bestvideo+bestaudio/best --recode-video flv"
-	elif [ "$CHOICE" = "03" ]
-	then
-		VIDEOFORM="bestvideo+bestaudio/best --merge-output-format mkv"
-	elif [ "$CHOICE" = "04" ]
-	then
-		VIDEOFORM="bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best --merge-output-format mp4"
-	elif [ "$CHOICE" = "05" ]
-	then
-		VIDEOFORM="bestvideo+bestaudio/best --recode-video ogg"
-	else
-		VIDEOFORM="best"
-	fi
-fi
-
-# check url
-CHECKURL=$(curl -o /dev/null --silent --head --write-out '%{http_code}' "$URL")
-
-if [ $CHECKURL -eq 200 ]
-then
-
-	if [ "$1" = "audio" ]
-	then
-		if [ -z $MUSICSAVEPATH ]
-		then
-			DIR=$($GUI"$TITLETEXT" $IMAGEA $SIZEW $FORM $TXT"$LOCAL3\n" $FIELD"Local:":DIR $BUTTONOK | cut -d "|" -f1)
-		else
-			DIR=$MUSICSAVEPATH
-		fi
-		cd $DIR		
-		youtube-dl -o '%(title)s.%(ext)s' --extract-audio --audio-format $AUDIOFORM --audio-quality 0 $URL | BAR=$($GUI"$TITLETEXT" $IMAGEA $SIZEW $PROGRESS"$LOCAL5" $PROGRESSTEXT"$LOCAL17")
-	
-		$GUI"$TITLETEXT" $IMAGEA $SIZEW $INFO $TXT"$LOACL11\n$LOCAL12" $BTNPLAY
-		if [ "$?" = "0" ]
-		then
-			FILE=$($GUI"$TITLETEXT" $IMAGEA $SIZEDIR $FORM $TXT"$LOCAL13\n" $FILEAUDIO --file-filter='*.aac *.flac *.mp3 *.m4a *.opus *.ogg *.wav' $BUTTONOK | cut -d "|" -f1)
-			#xdg-open "$FILE"
-			ffplay "$FILE"
-			exit 0
-		else
-			exit 0		
-		fi	
-	
-
-	elif [ "$1" = "video" ]
-	then
-		if [ -z $VIDEOSAVEPATH ]
-		then
-			DIR=$($GUI"$TITLETEXT" $IMAGEV $SIZEW $FORM $TXT"$LOCAL3\n" $FIELD"Local:":DIR $BUTTONOK | cut -d "|" -f1)
-		else
-			DIR=$VIDEOSAVEPATH
-		fi
-		cd $DIR
-		youtube-dl -f $VIDEOFORM -o '%(title)s.%(ext)s' $URL | BAR=$($GUI"$TITLETEXT" $IMAGEV $SIZEW $PROGRESS"$LOCAL5" $PROGRESSTEXT"$LOCAL17")
-	
-		$GUI"$TITLETEXT" $IMAGEV $SIZEW $INFO $TXT"$LOCAL6\n$LOCAL7" $BTNPLAY
-		if [ "$?" = "0" ]
-		then
-			FILE=$($GUI"$TITLETEXT" $IMAGEV $SIZEDIR $FORM $TXT"$LOCAL8\n" $FILEVIDEO --file-filter='*.avi *.flv *.mkv *.mp4 *.ogg' $BUTTONOK | cut -d "|" -f1)
-			#xdg-open "$FILE"
-			ffplay "$FILE"
-			exit 0
-		else
-			exit 0		
-		fi
-	fi	
-else	
-	$GUI"$TITLETEXT" $IMAGETUBE $SIZEW $INFO $TXT"$LOCAL4" $BUTTONOK
-	exit 0		
-fi
-
-exit 0
+    if [ $AVFORMAT = "video" ];then
+        cd $VIDEOSAVEPATH
+        youtube-dl -f $VIDEOFORM -o '%(title)s.%(ext)s' $URL | BAR=$($GUI"$TITLETEXTV" $IMAGEV $SIZEW $PROGRESS"$VIDEOSAVEPATH\n$LOCAL5" $PROGRESSTEXT"$LOCAL17")
+    if [ $PLAY = "TRUE" ];then
+     FILE=$($GUI"$TITLETEXT" $IMAGEV $SIZEDIR $FORM $TXT"$LOCAL8\n" $FILEVIDEO --file-filter='*.avi *.flv *.mkv *.mp4 *.ogg' $BNTPLAY | cut -d "|" -f1)
+        $PLAYER "$FILE" || exit
+    fi;fi

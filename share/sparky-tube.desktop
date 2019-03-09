@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Sparky Tube
+GenericName=Sparky Tube
+Comment=Download and play videos from YouTube
+Comment[fr]=Téléchargez et lisez des vidéos de YouTube
+Comment[pl]=Pobieraj i odtwarzaj filmy z YouTube
+Comment[pt]=Faça o download e reproduza vídeos do YouTube
+Type=Application
+Terminal=false
+Exec=/usr/bin/sparky-tube
+Icon=multimedia-audio-player
+Keywords=video;internet;download;youtube
+Categories=GTK;AudioVideo;Player;Video;

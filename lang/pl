@@ -1,22 +1,23 @@
 # Polish localization file for Sparky Tube
-# Last update 2019/02/10 by pavroo
+# Last update 2019/03/09 by pavroo
 LOCAL1="\nPakiet youtube-dl nie jest zainstalowany... \n\n Czy chcesz go zainstalować teraz?"
 LOCAL2="\nSkopiuj adres wideo i wklej go poniżej:\n"
 LOCAL3="\nWybierz miejsce do zapisu pliku:"
 LOCAL4="\nWprowadzony adres URL jest niewłaściwy!\n Proszę to sprawdzić i spróbować ponownie!\n\n Wyjście..."
 LOCAL5="Pobieranie i Konwertowanie..."
-LOCAL6="\nTwój plik Wideo został poprawnie zapisany!"
+LOCAL6="\nTwój plik Wideo został poprawnie zapisany!\n\n Wyjście..."
 LOCAL7="\nCzy chcesz odtworzyć plik wideo?"
 LOCAL8="\nWybierz plik wideo:"
 LOCAL9="Tak"
 LOCAL10="Nie"
-LOCAL11="\nTwój plik Audio został poprawnie zapisany!"
+LOCAL11="\nTwój plik Audio został poprawnie zapisany!\n\n Wyjście..."
 LOCAL12="\nCzy chcesz odtworzyć plik audio?"
 LOCAL13="\nWybierz plik audio:"
-LOCAL14="Wybierz format wyjściowy audio:"
-LOCAL15="Wybierz format wyjściowy wideo:"
+LOCAL14="Wybierz format wyjściowy:"
+LOCAL15="Odtwarzacz domyślny:"
 LOCAL16="Nie wprowadziłeś żadnego adresu URL!\n\n Wyjście..."
 LOCAL17="Proszę czekać aż skończy..."
+LOCAL18="Odtwórz po pobraniu"
 #
 #Comment[pl]=Pobierz wideo
 #Comment[pl]=Pobierz wideo do Audio
