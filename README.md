@@ -21,7 +21,7 @@ Dependencies:
 -------------
 coreutils
 curl
-ffmpeg | vlc | kmplayer | gmplayer | mpv | smplayer | totem
+ffmpeg | vlc | kmplayer | gmplayer | mpv | smplayer | totem | qmplay2 | rage | xine-ui
 grep
 xdg-user-dirs
 yad

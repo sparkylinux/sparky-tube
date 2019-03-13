@@ -2,8 +2,9 @@
 
 # Create by Elton 2019/01/24
 # Added a patch of MUSIC & VIDEO dirs by Sajmon
+# Added getFileName function by Sajmon
 # rewritten by Sajmon 2019/03/02
-# Last update 2019/02/06 by Sajmon
+# Last update 2019/02/13
 # License: GNU GPL 3 
 
 # get default's locale file
@@ -21,10 +22,11 @@ else
 fi
 
 PLAYERSLIST="ffplay"
-for i in kmplayer gmplayer mpv smplayer totem vlc;do
-if [ ! -z $(which $i) ];then
-PLAYERSLIST="$PLAYERSLIST,$i"
-fi;done
+for i in gmplayer kmplayer mpv QMPlay2 rage smplayer totem vlc xine; do
+	if [ ! -z $(which $i) ]; then
+		PLAYERSLIST="$PLAYERSLIST,$i"
+	fi
+done
 
 TITLETEXT="Sparky Tube"
 TITLETEXTV="Sparky Tube Video"
@@ -70,49 +72,54 @@ PLAYFORMAT=$(echo $YOUDOWN | cut -d'|' -f2 | cut -d: -f2)
 #play checkbox true/false
 PLAY=$(echo $YOUDOWN | cut -d'|' -f4)
 
-    if [ -z $URL ];then
-	    $GUI"$TITLETEXT" $IMAGETUBE $SIZEW $INFO $TXT"$LOCAL16" $BUTTONOK
+getFileName() {
+FILE=$(youtube-dl -o '%(title)s.%(ext)s' --get-filename $URL)
+}
+
+if [ -z $URL ]; then
+	$GUI"$TITLETEXT" $IMAGETUBE $SIZEW $INFO $TXT"$LOCAL16" $BUTTONOK
 	exit 1
-    fi
+fi
 
- CHECKURL=$(curl -o /dev/null --silent --head --write-out '%{http_code}' "$URL")
+CHECKURL=$(curl -o /dev/null --silent --head --write-out '%{http_code}' "$URL")
 
-    if [ ! $CHECKURL -eq 200 ];then
-        $GUI"$TITLETEXT" $IMAGETUBE $SIZEW $INFO $TXT"$LOCAL4" $BUTTONOK
-    exit 1
-    fi
+if [ ! $CHECKURL -eq 200 ]; then
+	$GUI"$TITLETEXT" $IMAGETUBE $SIZEW $INFO $TXT"$LOCAL4" $BUTTONOK
+	exit 1
+fi
 
-	    if [ "$PLAYFORMAT" = "avi" ]
-	    then
-		    VIDEOFORM="bestvideo+bestaudio/best --recode-video avi"
-	    elif [ "$PLAYFORMAT" = "flv" ]
-	    then
-		    VIDEOFORM="bestvideo+bestaudio/best --recode-video flv"
-	    elif [ "$PLAYFORMAT" = "mkv" ]
-	    then
-		    VIDEOFORM="bestvideo+bestaudio/best --merge-output-format mkv"
-	    elif [ "$PLAYFORMAT" = "mp4" ]
-	    then
-		    VIDEOFORM="bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best --merge-output-format mp4"
-	    elif [ "$PLAYFORMAT" = "ogg" ]
-	    then
-		    VIDEOFORM="bestvideo+bestaudio/best --recode-video ogg"
-	    else
-		    VIDEOFORM="best"
-	    fi
+if [ "$PLAYFORMAT" = "avi" ]; then
+	VIDEOFORM="bestvideo+bestaudio/best --recode-video avi"
+elif [ "$PLAYFORMAT" = "flv" ]; then
+	VIDEOFORM="bestvideo+bestaudio/best --recode-video flv"
+elif [ "$PLAYFORMAT" = "mkv" ]; then
+	VIDEOFORM="bestvideo+bestaudio/best --merge-output-format mkv"
+elif [ "$PLAYFORMAT" = "mp4" ]; then
+	VIDEOFORM="bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best --merge-output-format mp4"
+elif [ "$PLAYFORMAT" = "ogg" ]; then
+	VIDEOFORM="bestvideo+bestaudio/best --recode-video ogg"
+else
+	VIDEOFORM="best"
+fi
 
-    if [ $AVFORMAT = "audio" ];then
-        cd $MUSICSAVEPATH
-        youtube-dl -o '%(title)s.%(ext)s' --extract-audio --audio-format $PLAYFORMAT --audio-quality 0 $URL | BAR=$($GUI"$TITLETEXTA" $IMAGEA $SIZEW $PROGRESS"$MUSICSAVEPATH\n$LOCAL5" $PROGRESSTEXT"$LOCAL17")
-    if [ $PLAY = "TRUE" ];then
-        FILE=$($GUI"$TITLETEXT" $IMAGEA $SIZEDIR $FORM $TXT"$LOCAL13\n" $FILEAUDIO --file-filter='*.aac *.flac *.mp3 *.m4a *.opus *.ogg *.wav' $BNTPLAY | cut -d "|" -f1)
-        $PLAYER "$FILE" || exit
-    fi;fi
+if [ $AVFORMAT = "audio" ]; then
+	cd $MUSICSAVEPATH
+	youtube-dl -o '%(title)s.%(ext)s' --extract-audio --audio-format $PLAYFORMAT --audio-quality 0 $URL | BAR=$($GUI"$TITLETEXTA" $IMAGEA $SIZEW $PROGRESS"$MUSICSAVEPATH\n$LOCAL5" $PROGRESSTEXT"$LOCAL17")
+	if [ $PLAY = "TRUE" ]; then
+		getFileName
+		$PLAYER "${FILE%.*}.$PLAYFORMAT"
+		exit 0
+	fi
+fi
 
-    if [ $AVFORMAT = "video" ];then
-        cd $VIDEOSAVEPATH
-        youtube-dl -f $VIDEOFORM -o '%(title)s.%(ext)s' $URL | BAR=$($GUI"$TITLETEXTV" $IMAGEV $SIZEW $PROGRESS"$VIDEOSAVEPATH\n$LOCAL5" $PROGRESSTEXT"$LOCAL17")
-    if [ $PLAY = "TRUE" ];then
-     FILE=$($GUI"$TITLETEXT" $IMAGEV $SIZEDIR $FORM $TXT"$LOCAL8\n" $FILEVIDEO --file-filter='*.avi *.flv *.mkv *.mp4 *.ogg' $BNTPLAY | cut -d "|" -f1)
-        $PLAYER "$FILE" || exit
-    fi;fi
+if [ $AVFORMAT = "video" ]; then
+	cd $VIDEOSAVEPATH
+	youtube-dl -f $VIDEOFORM -o '%(title)s.%(ext)s' $URL | BAR=$($GUI"$TITLETEXTV" $IMAGEV $SIZEW $PROGRESS"$VIDEOSAVEPATH\n$LOCAL5" $PROGRESSTEXT"$LOCAL17")
+	if [ $PLAY = "TRUE" ]; then
+		getFileName
+		$PLAYER "${FILE%.*}.$PLAYFORMAT"
+		exit 0
+	fi
+fi
+
+exit 0
