@@ -1,10 +1,8 @@
 #!/bin/bash
 
-# Create by Elton 2019/01/24
-# Added a patch of MUSIC & VIDEO dirs by Sajmon
-# Added getFileName function by Sajmon
-# rewritten by Sajmon 2019/03/02
-# Last update 2019/02/13
+# Created by Elton 2019/01/24
+# Contributors: Elton, pavroo, Sajmon
+# Last update 2019/02/15
 # License: GNU GPL 3 
 
 # get default's locale file
@@ -32,9 +30,7 @@ TITLETEXT="Sparky Tube"
 TITLETEXTV="Sparky Tube Video"
 TITLETEXTA="Sparky Tube Audio"
 GUI="yad --center --image-on-top --title="
-IMAGEA="--window-icon=multimedia-audio-player --image=multimedia-audio-player"
-IMAGEV="--window-icon=multimedia-video-player --image=multimedia-video-player"
-IMAGETUBE="--window-icon=download --image=download"
+IMAGE="--window-icon=/usr/share/pixmaps/sparky-tube.png --image=/usr/share/pixmaps/sparky-tube.png"
 FORM="--form"
 INFO="--info"
 PROGRESS="--progress --pulsate --auto-close --no-buttons --auto-kill --text="
@@ -42,18 +38,12 @@ PROGRESSTEXT="--progress-text="
 FIELD="--field="
 TXT="--text="
 BUTTONOK="--button=Ok!gtk-ok:0"
-BTNPLAY="--button=$LOCAL9!gtk-ok:0 --button=$LOCAL10!cancel:1"
-FILEAUDIO="--file"
-FILEVIDEO="--file"
-SIZEW="--width=450"
-SIZEM="--width=500 --height=250"
-SIZEDIR="--width=850 --height=600"
+SIZE="--width=500"
 MUSICSAVEPATH=$(xdg-user-dir MUSIC)
 VIDEOSAVEPATH=$(xdg-user-dir VIDEOS)
 
-
-YOUDOWN=$($GUI"$TITLETEXT" $SIZEM $TXT"$LOCAL2" \
-$IMAGETUBE $FORM --item-separator="," \
+YOUDOWN=$($GUI"$TITLETEXT" $SIZE $TXT"$LOCAL2" \
+$IMAGE $FORM --item-separator="," \
 --button=Ok \
 $FIELD"<b>URL</b>:" \
 $FIELD"$LOCAL14":CBE \
@@ -72,19 +62,33 @@ PLAYFORMAT=$(echo $YOUDOWN | cut -d'|' -f2 | cut -d: -f2)
 #play checkbox true/false
 PLAY=$(echo $YOUDOWN | cut -d'|' -f4)
 
-getFileName() {
-FILE=$(youtube-dl -o '%(title)s.%(ext)s' --get-filename $URL)
+_getFileName() {
+FILE=$(youtube-dl -o '%(title)s.%(ext)s' --get-filename -s -i "$URL")
 }
 
+if echo "$URL" | grep -Eqs '&list' ; then
+	$GUI"$TITLETEXT" $IMAGE $SIZE $INFO $TXT"\n$LOCAL19: $LOCAL20\n$LOCAL21" $BUTTONOK
+	exit 1
+fi
+
 if [ -z $URL ]; then
-	$GUI"$TITLETEXT" $IMAGETUBE $SIZEW $INFO $TXT"$LOCAL16" $BUTTONOK
+	$GUI"$TITLETEXT" $IMAGE $SIZE $INFO $TXT"\n$LOCAL16" $BUTTONOK
 	exit 1
 fi
 
 CHECKURL=$(curl -o /dev/null --silent --head --write-out '%{http_code}' "$URL")
 
 if [ ! $CHECKURL -eq 200 ]; then
-	$GUI"$TITLETEXT" $IMAGETUBE $SIZEW $INFO $TXT"$LOCAL4" $BUTTONOK
+	$GUI"$TITLETEXT" $IMAGE $SIZE $INFO $TXT"$LOCAL4" $BUTTONOK
+	exit 1
+fi
+
+_getFileName
+
+if [ $? = 0 ]; then
+	true
+else
+	$GUI"$TITLETEXT" $IMAGE $SIZE $INFO $TXT"\n$LOCAL19: $LOCAL22" $BUTTONOK
 	exit 1
 fi
 
@@ -102,23 +106,25 @@ else
 	VIDEOFORM="best"
 fi
 
-if [ $AVFORMAT = "audio" ]; then
+if [ "$AVFORMAT" = "audio" ]; then
 	cd $MUSICSAVEPATH
-	youtube-dl -o '%(title)s.%(ext)s' --extract-audio --audio-format $PLAYFORMAT --audio-quality 0 $URL | BAR=$($GUI"$TITLETEXTA" $IMAGEA $SIZEW $PROGRESS"$MUSICSAVEPATH\n$LOCAL5" $PROGRESSTEXT"$LOCAL17")
-	if [ $PLAY = "TRUE" ]; then
-		getFileName
-		$PLAYER "${FILE%.*}.$PLAYFORMAT"
-		exit 0
-	fi
+	youtube-dl -o '%(title)s.%(ext)s' --extract-audio --audio-format $PLAYFORMAT --audio-quality 0 $URL | BAR=$($GUI"$TITLETEXTA" $IMAGE $SIZE $PROGRESS"\n$LOCAL5\n$MUSICSAVEPATH\n\n$LOCAL23\n${FILE%.*}.$PLAYFORMAT\n" $PROGRESSTEXT"$LOCAL17")
 fi
 
-if [ $AVFORMAT = "video" ]; then
+if [ "$AVFORMAT" = "video" ]; then
 	cd $VIDEOSAVEPATH
-	youtube-dl -f $VIDEOFORM -o '%(title)s.%(ext)s' $URL | BAR=$($GUI"$TITLETEXTV" $IMAGEV $SIZEW $PROGRESS"$VIDEOSAVEPATH\n$LOCAL5" $PROGRESSTEXT"$LOCAL17")
-	if [ $PLAY = "TRUE" ]; then
-		getFileName
-		$PLAYER "${FILE%.*}.$PLAYFORMAT"
-		exit 0
+	youtube-dl -f $VIDEOFORM -o '%(title)s.%(ext)s' $URL | BAR=$($GUI"$TITLETEXTV" $IMAGE $SIZE $PROGRESS"\n$LOCAL5\n$VIDEOSAVEPATH\n\n$LOCAL23\n${FILE%.*}.$PLAYFORMAT\n" $PROGRESSTEXT"$LOCAL17")
+fi
+
+if [ "$PLAY" = "TRUE" ]; then
+	$PLAYER "${FILE%.*}.$PLAYFORMAT"
+fi
+
+if [ "$PLAY" = "FALSE" ]; then
+	if [ "$AVFORMAT" = "audio" ]; then
+		$GUI"$TITLETEXT" $IMAGE $SIZE $INFO $TXT"${FILE%.*}.$PLAYFORMAT\n$LOCAL11" $BUTTONOK
+	else
+		$GUI"$TITLETEXT" $IMAGE $SIZE $INFO $TXT"${FILE%.*}.$PLAYFORMAT\n$LOCAL6" $BUTTONOK
 	fi
 fi
 

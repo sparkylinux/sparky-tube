@@ -16,9 +16,9 @@
 
 if [ "$1" = "uninstall" ]; then
 	rm -f /usr/bin/sparky-tube
-	rm -f /usr/share/applications/sparky-tube-mp3.desktop
-	rm -f /usr/share/applications/sparky-tube-mp4.desktop
+	rm -f /usr/share/applications/sparky-tube.desktop
 	rm -rf /usr/share/sparky/sparky-tube
+	rm -f /usr/share/pixmaps/sparky-tube.png
 else
 	cp bin/* /usr/bin/
 	cp share/* /usr/share/applications/
@@ -26,4 +26,5 @@ else
 		mkdir -p /usr/share/sparky/sparky-tube
 	fi
 	cp lang/* /usr/share/sparky/sparky-tube/
+	cp pixmaps/* /usr/share/pixmaps/
 fi
