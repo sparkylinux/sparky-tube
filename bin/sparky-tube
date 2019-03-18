@@ -2,7 +2,7 @@
 
 # Created by Elton 2019/01/24
 # Contributors: Elton, pavroo, Sajmon
-# Last update 2019/02/15
+# Last update 2019/02/18
 # License: GNU GPL 3 
 
 # get default's locale file
@@ -63,7 +63,7 @@ PLAYFORMAT=$(echo $YOUDOWN | cut -d'|' -f2 | cut -d: -f2)
 PLAY=$(echo $YOUDOWN | cut -d'|' -f4)
 
 _getFileName() {
-FILE=$(youtube-dl -o '%(title)s.%(ext)s' --get-filename -s -i "$URL")
+FILE=$(youtube-dl -o '%(title)s.%(ext)s' --get-filename -s -i "$URL" | sed "s/\&/\'&amp;\'/")
 }
 
 if echo "$URL" | grep -Eqs '&list' ; then
@@ -83,7 +83,11 @@ if [ ! $CHECKURL -eq 200 ]; then
 	exit 1
 fi
 
-_getFileName
+if echo "$URL" | grep -Eqs '&list' ; then
+	FILE="$LOCAL24:  "
+else
+        _getFileName
+fi
 
 if [ $? = 0 ]; then
 	true
@@ -108,12 +112,12 @@ fi
 
 if [ "$AVFORMAT" = "audio" ]; then
 	cd $MUSICSAVEPATH
-	youtube-dl -o '%(title)s.%(ext)s' --extract-audio --audio-format $PLAYFORMAT --audio-quality 0 $URL | BAR=$($GUI"$TITLETEXTA" $IMAGE $SIZE $PROGRESS"\n$LOCAL5\n$MUSICSAVEPATH\n\n$LOCAL23\n${FILE%.*}.$PLAYFORMAT\n" $PROGRESSTEXT"$LOCAL17")
+	youtube-dl -i -o '%(title)s.%(ext)s' --extract-audio --audio-format $PLAYFORMAT --audio-quality 0 "$URL" | BAR=$($GUI"$TITLETEXTA" $IMAGE $SIZE $PROGRESS"\n$LOCAL5\n$MUSICSAVEPATH\n\n$LOCAL23\n${FILE%.*}.$PLAYFORMAT\n" $PROGRESSTEXT"$LOCAL17")
 fi
 
 if [ "$AVFORMAT" = "video" ]; then
 	cd $VIDEOSAVEPATH
-	youtube-dl -f $VIDEOFORM -o '%(title)s.%(ext)s' $URL | BAR=$($GUI"$TITLETEXTV" $IMAGE $SIZE $PROGRESS"\n$LOCAL5\n$VIDEOSAVEPATH\n\n$LOCAL23\n${FILE%.*}.$PLAYFORMAT\n" $PROGRESSTEXT"$LOCAL17")
+	youtube-dl -i -f $VIDEOFORM -o '%(title)s.%(ext)s' "$URL" | BAR=$($GUI"$TITLETEXTV" $IMAGE $SIZE $PROGRESS"\n$LOCAL5\n$VIDEOSAVEPATH\n\n$LOCAL23\n${FILE%.*}.$PLAYFORMAT\n" $PROGRESSTEXT"$LOCAL17")
 fi
 
 if [ "$PLAY" = "TRUE" ]; then

@@ -1,5 +1,5 @@
 # Polish localization file for Sparky Tube
-# Last update 2019/03/15 by pavroo
+# Last update 2019/03/18 by pavroo
 LOCAL1="\nPakiet youtube-dl nie jest zainstalowany... \n\n Czy chcesz go zainstalować teraz?"
 LOCAL2="\nSkopiuj adres wideo i wklej go poniżej:\n"
 LOCAL3="\nWybierz miejsce do zapisu pliku:"
@@ -23,5 +23,6 @@ LOCAL20="Wideo z listy nie jest dostępne."
 LOCAL21="Pracujemy nad tym."
 LOCAL22="Nieznany błąd."
 LOCAL23="Nazwa pliku:"
+LOCAL24="Pobieranie z playlisty do"
 #
 #Comment[pl]=Pobieraj i odtwarzaj filmy z YouTube

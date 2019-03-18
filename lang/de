@@ -1,5 +1,5 @@
 # German localization file for Sparky Tube by Sajmon
-# Last update 2019/03/15 by pavroo
+# Last update 2019/03/18 by pavroo
 LOCAL1="\nDas youtube-dl-Paket ist nicht installiert.... \n\n Möchten Sie es jetzt installieren?"
 LOCAL2="\nVideo link kopieren und einfügen:\n"
 LOCAL3="\nWählen Sie einen Ort zum Speichern der Datei aus:"
@@ -18,10 +18,11 @@ LOCAL15="Standart Player:"
 LOCAL16="Du hast keine URL eingegeben!\n\n Beenden..."
 LOCAL17="Bitte warten Sie, bis es fertig ist..."
 LOCAL18="Abspielen nach Download"
-LOCAL19="ERROR"
-LOCAL20="Videos from the lists are not available."
-LOCAL21="We are working on this."
-LOCAL22="Unknown error."
-LOCAL23="File name:"
+LOCAL19="FEHLER"
+LOCAL20="Videos aus den Listen sind zurzeit nicht verfügbar."
+LOCAL21="Wir arbeiten daran."
+LOCAL22="Unbekannte fehler."
+LOCAL23="Dateiname:"
+LOCAL24="Herunterladen von der Wiedergabeliste nach"
 #
-#Comment[de]=Download and play videos from YouTube
+#Comment[de]=Laden Sie Videos von YouTube herunter und spielen Sie ab

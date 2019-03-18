@@ -1,5 +1,5 @@
 # English localization file for Sparky Tube
-# Last update 2019/03/15 by pavroo
+# Last update 2019/03/18 by pavroo
 LOCAL1="\nThe youtube-dl package is not installed... \n\n Do you want to install now?"
 LOCAL2="\nCopy and paste the video address below:\n"
 LOCAL3="\nChoose the location you want to save:"
@@ -23,5 +23,6 @@ LOCAL20="Videos from the lists are not available."
 LOCAL21="We are working on this."
 LOCAL22="Unknown error."
 LOCAL23="File name:"
+LOCAL24="Downloading from playlist to"
 #
 #Comment[en]=Download and play videos from YouTube
