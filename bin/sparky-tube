@@ -2,7 +2,7 @@
 
 # Created by Elton 2019/01/24
 # Contributors: Elton, pavroo, Sajmon
-# Last update 2019/03/21
+# Last update 2019/03/22
 # License: GNU GPL 3 
 
 # get default's locale file
@@ -65,11 +65,6 @@ PLAY=$(echo $YOUDOWN | cut -d'|' -f4)
 _getFileName() {
 FILE=$(youtube-dl -o '%(title)s.%(ext)s' -e -s "$URL" | sed "s/\&/\'&amp;\'/")
 }
-
-if echo "$URL" | grep -Eqs '&list' ; then
-	$GUI"$TITLETEXT" $IMAGE $SIZE $INFO $TXT"\n$LOCAL19: $LOCAL20\n$LOCAL21" $BUTTONOK
-	exit 1
-fi
 
 if [ -z $URL ]; then
 	$GUI"$TITLETEXT" $IMAGE $SIZE $INFO $TXT"\n$LOCAL16" $BUTTONOK
