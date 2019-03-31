@@ -2,7 +2,7 @@
 
 # Created by Elton 2019/01/24
 # Contributors: Elton, pavroo, Sajmon
-# Last update 2019/03/22
+# Last update 2019/03/31
 # License: GNU GPL 3 
 
 # get default's locale file
@@ -30,7 +30,7 @@ TITLETEXT="Sparky Tube"
 TITLETEXTV="Sparky Tube Video"
 TITLETEXTA="Sparky Tube Audio"
 GUI="yad --center --image-on-top --title="
-IMAGE="--window-icon=/usr/share/pixmaps/sparky-tube.png --image=/usr/share/pixmaps/sparky-tube.png"
+IMAGE="--window-icon=/usr/share/pixmaps/sparky-tube.svg --image=/usr/share/pixmaps/sparky-tube.svg"
 FORM="--form"
 INFO="--info"
 PROGRESS="--progress --pulsate --auto-close --no-buttons --auto-kill --text="
@@ -49,7 +49,8 @@ $FIELD"<b>URL</b>:" \
 $FIELD"$LOCAL14":CBE \
 $FIELD"$LOCAL15":CBE \
 $FIELD"$LOCAL18":CHK \
-"" "audio:mp3,audio:aac,audio:flac,audio:m4a,audio:opus,audio:ogg,audio:wav,video:mp4,video:avi,video:flv,video:mkv,video:ogg" "$PLAYERSLIST")
+"" "audio:mp3,audio:aac,audio:flac,audio:m4a,audio:opus,audio:ogg,audio:wav,video:mp4,video:avi,video:flv,video:mkv,video:ogg" "$PLAYERSLIST" \
+$FIELD"Download Playlist":CHK)
 
 #url
 URL=$(echo $YOUDOWN | cut -d'|' -f1)
@@ -61,9 +62,12 @@ AVFORMAT=$(echo $YOUDOWN | cut -d'|' -f2 | cut -d: -f1)
 PLAYFORMAT=$(echo $YOUDOWN | cut -d'|' -f2 | cut -d: -f2)
 #play checkbox true/false
 PLAY=$(echo $YOUDOWN | cut -d'|' -f4)
+#playlist
+PLAYLST=$(echo $YOUDOWN | cut -d'|' -f5)
 
 _getFileName() {
-FILE=$(youtube-dl -o '%(title)s.%(ext)s' -e -s "$URL" | sed "s/\&/\'&amp;\'/")
+FILE=$(youtube-dl --no-playlist -o '%(title)s.%(ext)s' -es "$URL" | sed "s/\&/\'&amp;\'/")
+PLAYLISTITLE=$FILE
 }
 
 if [ -z $URL ]; then
@@ -78,10 +82,15 @@ if [ ! $CHECKURL -eq 200 ]; then
 	exit 1
 fi
 
+_getFileName
+
 if echo "$URL" | grep -Eqs '&list' ; then
-	FILE="$LOCAL24:  "
-else
-        _getFileName
+    FILE="$LOCAL24 \n$PLAYLISTITLE"
+    if [ "$PLAYLST" = "TRUE" ]; then
+        PLAYLISTOPT="-i -c --yes-playlist"
+    else
+        PLAYLISTOPT="--no-playlist"
+    fi
 fi
 
 if [ $? = 0 ]; then
@@ -107,12 +116,17 @@ fi
 
 if [ "$AVFORMAT" = "audio" ]; then
 	cd $MUSICSAVEPATH
-	youtube-dl -c --no-playlist -o '%(title)s.%(ext)s' --extract-audio --audio-format $PLAYFORMAT --audio-quality 0 "$URL" | BAR=$($GUI"$TITLETEXTA" $IMAGE $SIZE $PROGRESS"\n$LOCAL5\n$MUSICSAVEPATH\n\n$LOCAL23\n${FILE%.*}.$PLAYFORMAT\n" $PROGRESSTEXT"$LOCAL17")
+	youtube-dl  $PLAYLISTOPT -o '%(title)s.%(ext)s' -x --audio-format $PLAYFORMAT --newline "$URL" | BAR=$($GUI"$TITLETEXTA" $IMAGE $SIZE $PROGRESS"\n$LOCAL5 audio:$PLAYFORMAT\n$MUSICSAVEPATH\n\n$LOCAL23\n$FILE\n" $PROGRESSTEXT"$LOCAL17")
 fi
 
 if [ "$AVFORMAT" = "video" ]; then
 	cd $VIDEOSAVEPATH
-	youtube-dl -c --no-playlist -f $VIDEOFORM -o '%(title)s.%(ext)s' "$URL" | BAR=$($GUI"$TITLETEXTV" $IMAGE $SIZE $PROGRESS"\n$LOCAL5\n$VIDEOSAVEPATH\n\n$LOCAL23\n${FILE%.*}.$PLAYFORMAT\n" $PROGRESSTEXT"$LOCAL17")
+	youtube-dl $PLAYLISTOPT --newline -f $VIDEOFORM -o '%(title)s.%(ext)s' "$URL" | BAR=$($GUI"$TITLETEXTV" $IMAGE $SIZE $PROGRESS"\n$LOCAL5 video:$PLAYFORMAT\n$VIDEOSAVEPATH\n\n$LOCAL23\n$FILE\n" $PROGRESSTEXT"$LOCAL17")
+fi
+
+if [ "$PLAY" = "TRUE" -a "$PLAYLST" = "TRUE" ]; then
+	FILE=$($GUI"$TITLETEXT" $IMAGEV $SIZEDIR $FORM $TXT"$LOCAL8\n" --file-selection --file-filter='*.aac *.flac *.mp3 *.m4a *.opus *.ogg *.wav *.avi *.flv *.mkv *.mp4 *.ogg' | cut -d "|" -f1)
+[ -z $FILE ] && PLAY="FALSE"
 fi
 
 if [ "$PLAY" = "TRUE" ]; then
@@ -126,5 +140,7 @@ if [ "$PLAY" = "FALSE" ]; then
 		$GUI"$TITLETEXT" $IMAGE $SIZE $INFO $TXT"${FILE%.*}.$PLAYFORMAT\n$LOCAL6" $BUTTONOK
 	fi
 fi
+
+rm -f *.part
 
 exit 0

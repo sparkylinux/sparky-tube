@@ -10,6 +10,6 @@ Comment[pt_PT]=Faça o download e reproduza vídeos do YouTube
 Type=Application
 Terminal=false
 Exec=/usr/bin/sparky-tube
-Icon=/usr/share/pixmaps/sparky-tube.png
+Icon=/usr/share/pixmaps/sparky-tube.svg
 Keywords=video;internet;download;youtube
 Categories=GTK;AudioVideo;Player;Video;
