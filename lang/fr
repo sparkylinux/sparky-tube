@@ -1,7 +1,7 @@
 ﻿# Fichier de localisation française de Sparky Tube.
 # Copyright 2019 hiver <hiver@club-internet.fr> 2019/03/03
 # Sous licence GNU GPL v2
-# Last update 2019/03/18 by pavroo
+# Last update 2019/04/07 by pavroo
 LOCAL1="\nLe paquet youtube-dl n'est pas installé... \n\n Voulez-vous l'installer maintenant?"
 LOCAL2="\nCopiez et collez l'adresse de la vidéo ci-dessous:\n"
 LOCAL3="\nChoississez l'emplacement où enregistrer le fichier:"
@@ -26,5 +26,6 @@ LOCAL21="We are working on this."
 LOCAL22="Unknown error."
 LOCAL23="File name:"
 LOCAL24="Downloading from playlist to"
+LOCAL25="Download Playlist"
 #
 #Comment[fr]=Téléchargez et lisez des vidéos de YouTube

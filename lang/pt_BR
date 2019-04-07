@@ -1,5 +1,5 @@
 # Arquivo de localização para o Português do Brasil do Sparky MP4.
-# Last update 2019/03/18 by pavroo
+# Last update 2019/04/07 by pavroo
 LOCAL1="\nO pacote youtube-dl não está instalado... \n\n Você deseja instalar agora?"
 LOCAL2="\nCopie e cole o endereço do vídeo abaixo:\n"
 LOCAL3="\nEscolha o local desejado para salvar:"
@@ -24,5 +24,6 @@ LOCAL21="We are working on this."
 LOCAL22="Unknown error."
 LOCAL23="File name:"
 LOCAL24="Downloading from playlist to"
+LOCAL25="Download Playlist"
 #
 #Comment[pt_BR]=Baixar r reproduzir videos do YouTube

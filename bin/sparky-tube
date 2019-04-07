@@ -2,7 +2,7 @@
 
 # Created by Elton 2019/01/24
 # Contributors: Elton, pavroo, Sajmon
-# Last update 2019/03/31
+# Last update 2019/04/07
 # License: GNU GPL 3 
 
 # get default's locale file
@@ -50,7 +50,7 @@ $FIELD"$LOCAL14":CBE \
 $FIELD"$LOCAL15":CBE \
 $FIELD"$LOCAL18":CHK \
 "" "audio:mp3,audio:aac,audio:flac,audio:m4a,audio:opus,audio:ogg,audio:wav,video:mp4,video:avi,video:flv,video:mkv,video:ogg" "$PLAYERSLIST" \
-$FIELD"Download Playlist":CHK)
+$FIELD"$LOCAL25":CHK)
 
 #url
 URL=$(echo $YOUDOWN | cut -d'|' -f1)
