@@ -19,11 +19,11 @@ LOCAL16="Você não inseriu alguma URL!\n\nSaindo..."
 LOCAL17="Por favor, aguarde até completar..."
 LOCAL18="Reproduzir depois que baixar"
 LOCAL19="ERRO"
-LOCAL20="Vídeos das listas não estão disponíveis."
+LOCAL20="Vídeos da lista não estão disponíveis."
 LOCAL21="Estamos trabalhando nisso."
 LOCAL22="Erro desconhecido."
 LOCAL23="Nome do Arquivo:"
-LOCAL24="Baixar da playlist para"
+LOCAL24="Baixando da playlist para"
 LOCAL25="Baixar Playlist"
 #
 #Comment[pt_BR]=Baixar e reproduzir videos do YouTube
