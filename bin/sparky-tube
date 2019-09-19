@@ -2,7 +2,7 @@
 
 # Created by Elton 2019/01/24
 # Contributors: Elton, pavroo, Sajmon
-# Last update 2019/06/16
+# Last update 2019/09/19
 # License: GNU GPL 3 
 
 # get default's locale file
@@ -10,7 +10,9 @@ DEFLOCDIR="/usr/share/sparky/sparky-tube"
 if grep -Eqs 'de' /etc/default/locale; then
 . $DEFLOCDIR/de
 elif grep -Eqs 'fr' /etc/default/locale; then
-. $DEFLOCDIR/fr  
+. $DEFLOCDIR/fr
+elif grep -Eqs 'hu' /etc/default/locale; then
+. $DEFLOCDIR/hu
 elif grep -Eqs 'pl' /etc/default/locale; then
 . $DEFLOCDIR/pl
 elif grep -Eqs 'pt_BR' /etc/default/locale; then
