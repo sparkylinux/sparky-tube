@@ -3,7 +3,7 @@
 LOCAL1="\nA youtube-dl csomag nincs telepítve... \n\nMost akarja telepíteni?"
 LOCAL2="\nMásolja és illesse be a videó címét alább/alulra:\n"
 LOCAL3="\nVálassza ki a helyet, ahová menteni akar:"
-LOCAL4="\nAz Ön által beírt érvénytelen!\nKérjük, ellenőrizze és próbálja újra!\n\nKilépés..."
+LOCAL4="\nAz Ön által beírt URL érvénytelen!\nKérjük, ellenőrizze és próbálja újra!\n\nKilépés..."
 LOCAL5="Letöltés és konvertálás a (hely)-be:"
 LOCAL6="\nAz Ön Videója sikeresen elmentve!\n\nKilépés..."
 LOCAL7="\nLe akarja játszani a videót?"
