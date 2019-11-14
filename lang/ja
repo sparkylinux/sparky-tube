@@ -1,0 +1,30 @@
+# Japanese localization file for Sparky Tube
+# Last update 2019/04/07 by pavroo
+# Translated to Japanese by FuRuYa7.
+LOCAL1="\nyoutube-dl パッケージがインストールされていません...\n\n今すぐインストールしますか？"
+LOCAL2="\n以下の動画のURL をコピーして貼り付けてください:\n"
+LOCAL3="\n保存する場所を選択します:"
+LOCAL4="\n入力したURL は無効です！\n確認してからもう一度試してください！\n\n\終了しています..."
+LOCAL5="ダウンロードして変換します:"
+LOCAL6="\n動画は正常に保存されました！\n\n終了しています..."
+LOCAL7="\n動画を再生しますか？"
+LOCAL8="\n動画を選択:"
+LOCAL9="はい"
+LOCAL10="いいえ"
+LOCAL11="\n音声は正常に保存されました！\n\n終了しています..."
+LOCAL12="\n音声を再生しますか？"
+LOCAL13="\n音声を選択:"
+LOCAL14="出力形式を選択します:"
+LOCAL15="標準プレーヤー:"
+LOCAL16="URL を入力していません！\n\n終了しています..."
+LOCAL17="完了するまでお待ちください..."
+LOCAL18="ダウンロード後に再生します"
+LOCAL19="エラー"
+LOCAL20="リストの動画は利用できません。"
+LOCAL21="これに取り組んでいます。"
+LOCAL22="不明なエラー。"
+LOCAL23="ファイル名:"
+LOCAL24="プレイリストからダウンロードします"
+LOCAL25="プレイリストをダウンロードします"
+### .desktop file to be translated too
+# Comment[ja_JP]=YouTube 動画をダウンロードおよび再生します
