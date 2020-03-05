@@ -30,7 +30,7 @@ else
 fi
 
 PLAYERSLIST="ffplay"
-for i in gmplayer kmplayer mpv QMPlay2 rage smplayer totem vlc xine; do
+for i in gmplayer kmplayer mpv QMPlay2 rage smplayer totem vlc xine celluloid; do
 	if [ ! -z $(which $i) ]; then
 		PLAYERSLIST="$PLAYERSLIST,$i"
 	fi
