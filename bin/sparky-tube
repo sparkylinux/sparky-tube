@@ -2,7 +2,7 @@
 
 # Created by Elton 2019/01/24
 # Contributors: Elton, pavroo, Sajmon
-# Last update 2020/03/05 by Elton
+# Last update 2020/04/19 by Sajmon
 # License: GNU GPL 3 
 
 # get default's locale file
@@ -30,7 +30,7 @@ else
 fi
 
 PLAYERSLIST="ffplay"
-for i in gmplayer kmplayer mpv QMPlay2 rage smplayer totem vlc xine celluloid; do
+for i in celluloid gmplayer kmplayer mpv QMPlay2 rage smplayer totem vlc xine; do
 	if [ ! -z $(which $i) ]; then
 		PLAYERSLIST="$PLAYERSLIST,$i"
 	fi
@@ -126,12 +126,12 @@ fi
 
 if [ "$AVFORMAT" = "audio" ]; then
 	cd $MUSICSAVEPATH
-	youtube-dl  $PLAYLISTOPT -o '%(title)s.%(ext)s' -x --audio-format $PLAYFORMAT --newline "$URL" | BAR=$($GUI"$TITLETEXTA" $IMAGE $SIZE $PROGRESS"\n$LOCAL5 audio:$PLAYFORMAT\n$MUSICSAVEPATH\n\n$LOCAL23\n$FILE\n" $PROGRESSTEXT"$LOCAL17")
+	youtube-dl --rm-cache-dir $PLAYLISTOPT -o '%(title)s.%(ext)s' -x --audio-format $PLAYFORMAT --newline "$URL" | BAR=$($GUI"$TITLETEXTA" $IMAGE $SIZE $PROGRESS"\n$LOCAL5 audio:$PLAYFORMAT\n$MUSICSAVEPATH\n\n$LOCAL23\n$FILE\n" $PROGRESSTEXT"$LOCAL17")
 fi
 
 if [ "$AVFORMAT" = "video" ]; then
 	cd $VIDEOSAVEPATH
-	youtube-dl $PLAYLISTOPT --newline -f $VIDEOFORM -o '%(title)s.%(ext)s' "$URL" | BAR=$($GUI"$TITLETEXTV" $IMAGE $SIZE $PROGRESS"\n$LOCAL5 video:$PLAYFORMAT\n$VIDEOSAVEPATH\n\n$LOCAL23\n$FILE\n" $PROGRESSTEXT"$LOCAL17")
+	youtube-dl --rm-cache-dir $PLAYLISTOPT --newline -f $VIDEOFORM -o '%(title)s.%(ext)s' "$URL" | BAR=$($GUI"$TITLETEXTV" $IMAGE $SIZE $PROGRESS"\n$LOCAL5 video:$PLAYFORMAT\n$VIDEOSAVEPATH\n\n$LOCAL23\n$FILE\n" $PROGRESSTEXT"$LOCAL17")
 fi
 
 if [ "$PLAY" = "TRUE" -a "$PLAYLST" = "TRUE" ]; then
