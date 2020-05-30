@@ -1,7 +1,7 @@
 # Hungarian localization file for Sparky Tube (Translated by Nemomen)
-# Last update 2019/09/19 by pavroo
+# Last update 2020/05/30 by pavroo
 LOCAL1="\nA youtube-dl csomag nincs telepítve... \n\nMost akarja telepíteni?"
-LOCAL2="\nMásolja és illesse be a videó címét alább/alulra:\n"
+LOCAL2="\nMásolja és illessze be a videó címét alább/alulra:\n"
 LOCAL3="\nVálassza ki a helyet, ahová menteni akar:"
 LOCAL4="\nAz Ön által beírt URL érvénytelen!\nKérjük, ellenőrizze és próbálja újra!\n\nKilépés..."
 LOCAL5="Letöltés és konvertálás a (hely)-be:"
