@@ -1,0 +1,29 @@
+# Spanish localization file for Sparky Tube
+# Last update 2021/03/29 by Leonardo Muñoz
+LOCAL1="El paquete youtube-dl no está instalado ... ¿Desea instalarlo ahora?"
+LOCAL2="Copia y pega la dirección de video a continuación:"
+LOCAL3="Elija la ubicación que desea guardar:"
+LOCAL4="¡La URL que ingresó no es válida! Por favor, verifique y vuelva a intentarlo. Saliendo ..."
+LOCAL5="Descarga y conversión a:"
+LOCAL6="¡Tu video se guardó correctamente! Saliendo ..."
+LOCAL7="¿Quieres reproducir el video?"
+LOCAL8="Selecciona el video:"
+LOCAL9="Si"
+LOCAL10="No"
+LOCAL11="¡Su audio se guardó correctamente! Saliendo ..."
+LOCAL12="¿Quieres reproducir el audio?"
+LOCAL13="Seleccione el audio:"
+LOCAL14="Elija un formato de salida:"
+LOCAL15="Reproductor estándar:"
+LOCAL16="¡No ha introducido ninguna URL! Saliendo ..."
+LOCAL17="Por favor, espere hasta que se cumpla ..."
+LOCAL18="Reproducir después de descargar"
+LOCAL19="ERROR"
+LOCAL20="Los videos de las listas no están disponibles".
+LOCAL21="Estamos trabajando en esto."
+LOCAL22="Error desconocido."
+LOCAL23="Nombre del archivo:"
+LOCAL24="Descargando de la lista de reproducción a"
+LOCAL25="Descargar lista de reproducción"
+#
+#Comment[en]=Download and play videos from YouTube
