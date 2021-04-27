@@ -2,7 +2,7 @@
 
 # Created by Elton 2019/01/24
 # Contributors: Elton, pavroo, Sajmon
-# Last update 2021/04/01 by pavroo
+# Last update 2021/04/27 by pavroo
 # License: GNU GPL 3 
 
 # get default's locale file
@@ -78,7 +78,7 @@ PLAY=$(echo $YOUDOWN | cut -d'|' -f4)
 PLAYLST=$(echo $YOUDOWN | cut -d'|' -f5)
 
 _getFileName() {
-FILE=$(youtube-dl --no-playlist -o '%(title)s.%(ext)s' -es "$URL" | sed "s/\&/\'&amp;\'/")
+FILE=$(youtube-dl --no-playlist -o '%(title)s.%(ext)s' -es "$URL" | sed "s/\&/\'&amp;\'/;s/?//")
 PLAYLISTITLE=$FILE
 }
 
