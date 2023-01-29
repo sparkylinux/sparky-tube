@@ -11,6 +11,7 @@ Comment[pl]=Pobieraj i odtwarzaj filmy z YouTube
 Comment[pt_BR]=Baixar e reproduzir videos do YouTube
 Comment[pt_PT]=Faça o download e reproduza vídeos do YouTube
 Comment[ru]=Скачивание и воспроизводение видео с YouTube
+Comment[uk]=Завантаження та відтворення відео з YouTube
 Type=Application
 Terminal=false
 Exec=/usr/bin/sparky-tube

@@ -2,7 +2,7 @@
 
 # Created by Elton 2019/01/24
 # Contributors: Elton, pavroo, Sajmon
-# Last update 2021/04/27 by pavroo
+# Last update 2023/01/29 by pavroo
 # License: GNU GPL 3 
 
 # get default's locale file
@@ -27,6 +27,8 @@ elif [ "`cat /etc/default/locale | grep LANG= | grep pt_BR`" != "" ]; then
 . $DEFLOCDIR/pt_BR
 elif [ "`cat /etc/default/locale | grep LANG= | grep ru`" != "" ]; then
 . $DEFLOCDIR/ru
+elif [ "`cat /etc/default/locale | grep LANG= | grep uk`" != "" ]; then
+. $DEFLOCDIR/uk
 else
 . $DEFLOCDIR/en
 fi
