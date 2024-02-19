@@ -16,3 +16,31 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Dependencies:
+-------------
+coreutils
+curl
+ffmpeg | vlc | kmplayer | gmplayer | mpv | smplayer | totem | qmplay2 | rage | xine-ui | celluloid
+grep
+xdg-user-dirs
+yad
+youtube-dl
+
+Conflicts:
+-------------
+sparkytube
+
+Replaces:
+-------------
+sparkytube
+
+Install:
+-------------
+su (or sudo) 
+./install.sh
+
+Uninstall:
+-------------
+su (or sudo)
+./install.sh uninstall

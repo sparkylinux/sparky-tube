@@ -1,0 +1,173 @@
+#!/bin/bash
+
+# Created by Elton 2019/01/24
+# Contributors: Elton, pavroo, Sajmon
+# Last update 2024/02/19 by pavroo
+# License: GNU GPL 3 
+
+# get default's locale file
+DEFLOCDIR="/usr/share/sparky/sparky-tube"
+if [ "`cat /etc/default/locale | grep LANG= | grep de`" != "" ]; then
+. $DEFLOCDIR/de
+elif [ "`cat /etc/default/locale | grep LANG= | grep el`" != "" ]; then
+. $DEFLOCDIR/el
+elif [ "`cat /etc/default/locale | grep LANG= | grep es`" != "" ]; then
+. $DEFLOCDIR/es
+elif [ "`cat /etc/default/locale | grep LANG= | grep fr`" != "" ]; then
+. $DEFLOCDIR/fr
+elif [ "`cat /etc/default/locale | grep LANG= | grep hu`" != "" ]; then
+. $DEFLOCDIR/hu
+elif [ "`cat /etc/default/locale | grep LANG= | grep it`" != "" ]; then
+. $DEFLOCDIR/it
+elif [ "`cat /etc/default/locale | grep LANG= | grep ja`" != "" ]; then
+. $DEFLOCDIR/ja
+elif [ "`cat /etc/default/locale | grep LANG= | grep pl`" != "" ]; then
+. $DEFLOCDIR/pl
+elif [ "`cat /etc/default/locale | grep LANG= | grep pt_BR`" != "" ]; then
+. $DEFLOCDIR/pt_BR
+elif [ "`cat /etc/default/locale | grep LANG= | grep ru`" != "" ]; then
+. $DEFLOCDIR/ru
+elif [ "`cat /etc/default/locale | grep LANG= | grep uk`" != "" ]; then
+. $DEFLOCDIR/uk
+else
+. $DEFLOCDIR/en
+fi
+
+PLAYERSLIST="ffplay"
+for i in celluloid gmplayer kmplayer mpv QMPlay2 rage smplayer totem vlc xine; do
+	if [ ! -z $(which $i) ]; then
+		PLAYERSLIST="$PLAYERSLIST,$i"
+	fi
+done
+
+TITLETEXT="Sparky Tube"
+TITLETEXTV="Sparky Tube Video"
+TITLETEXTA="Sparky Tube Audio"
+GUI="yad --center --image-on-top --title="
+IMAGE="--window-icon=/usr/share/pixmaps/sparky-tube.svg --image=/usr/share/pixmaps/sparky-tube.svg"
+FORM="--form"
+INFO="--info"
+PROGRESS="--progress --pulsate --auto-close --no-buttons --auto-kill --text="
+PROGRESSTEXT="--progress-text="
+FIELD="--field="
+TXT="--text="
+BUTTONOK="--button=Ok!gtk-ok:0"
+SIZE="--width=500"
+#MUSICSAVEPATH=$(xdg-user-dir MUSIC)
+MUSICSAVEPATH=`echo $HOME`
+#VIDEOSAVEPATH=$(xdg-user-dir VIDEOS)
+VIDEOSAVEPATH=`echo $HOME`
+
+## old opts
+## --no-playlist                        Download only the video, if the URL
+## -o, --output TEMPLATE                Output filename template, see the
+# -e, --get-title                      Simulate, quiet but print title
+## -s, --simulate                       Do not download the video and do not
+##  --rm-cache-dir                       Delete all filesystem cache files
+## -x, --extract-audio                  Convert video files to audio-only files
+## --audio-format                       Audio format code
+## --newline                            Output progress bar as new lines
+## -f, --format FORMAT                  Video format code
+
+YOUDOWN=$($GUI"$TITLETEXT" $SIZE $TXT"$LOCAL2" \
+$IMAGE $FORM --item-separator="," \
+--button=Ok \
+$FIELD"<b>URL</b>:" \
+$FIELD"$LOCAL14":CBE \
+$FIELD"$LOCAL15":CBE \
+$FIELD"$LOCAL18":CHK \
+"" "audio:mp3,audio:aac,audio:flac,audio:m4a,audio:opus,audio:ogg,audio:wav,video:mp4,video:avi,video:flv,video:mkv,video:ogg" "$PLAYERSLIST" \
+$FIELD"$LOCAL25":CHK)
+
+#url
+URL=$(echo $YOUDOWN | cut -d'|' -f1)
+#av players
+PLAYER=$(echo $YOUDOWN | cut -d'|' -f3)
+#audio / video
+AVFORMAT=$(echo $YOUDOWN | cut -d'|' -f2 | cut -d: -f1)
+#
+PLAYFORMAT=$(echo $YOUDOWN | cut -d'|' -f2 | cut -d: -f2)
+#play checkbox true/false
+PLAY=$(echo $YOUDOWN | cut -d'|' -f4)
+#playlist
+PLAYLST=$(echo $YOUDOWN | cut -d'|' -f5)
+
+_getFileName() {
+FILE=$(yt-dlp --no-playlist -o '%(title)s.%(ext)s' -es "$URL" | sed "s/\&/\'&amp;\'/;s/?//")
+PLAYLISTITLE=$FILE
+}
+
+if [ -z $URL ]; then
+	$GUI"$TITLETEXT" $IMAGE $SIZE $INFO $TXT"\n$LOCAL16" $BUTTONOK
+	exit 1
+fi
+
+CHECKURL=$(curl -o /dev/null --silent --head --write-out '%{http_code}' "$URL")
+
+if [ ! $CHECKURL -eq 200 ]; then
+	$GUI"$TITLETEXT" $IMAGE $SIZE $INFO $TXT"$LOCAL4" $BUTTONOK
+	exit 1
+fi
+
+_getFileName
+
+if echo "$URL" | grep -Eqs '&list' ; then
+    FILE="$LOCAL24 \n$PLAYLISTITLE"
+    if [ "$PLAYLST" = "TRUE" ]; then
+        PLAYLISTOPT="-i -c --yes-playlist"
+    else
+        PLAYLISTOPT="--no-playlist"
+    fi
+fi
+
+if [ $? = 0 ]; then
+	true
+else
+	$GUI"$TITLETEXT" $IMAGE $SIZE $INFO $TXT"\n$LOCAL19: $LOCAL22" $BUTTONOK
+	exit 1
+fi
+
+if [ "$PLAYFORMAT" = "avi" ]; then
+	VIDEOFORM="bestvideo+bestaudio/best --recode-video avi"
+elif [ "$PLAYFORMAT" = "flv" ]; then
+	VIDEOFORM="bestvideo+bestaudio/best --recode-video flv"
+elif [ "$PLAYFORMAT" = "mkv" ]; then
+	VIDEOFORM="bestvideo+bestaudio/best --merge-output-format mkv"
+elif [ "$PLAYFORMAT" = "mp4" ]; then
+	VIDEOFORM="bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best --merge-output-format mp4"
+elif [ "$PLAYFORMAT" = "ogg" ]; then
+	VIDEOFORM="bestvideo+bestaudio/best --recode-video ogg"
+else
+	VIDEOFORM="best"
+fi
+
+if [ "$AVFORMAT" = "audio" ]; then
+	cd $MUSICSAVEPATH
+	yt-dlp --rm-cache-dir $PLAYLISTOPT -o '%(title)s.%(ext)s' -x --audio-format $PLAYFORMAT --newline "$URL" | BAR=$($GUI"$TITLETEXTA" $IMAGE $SIZE $PROGRESS"\n$LOCAL5 audio:$PLAYFORMAT\n$MUSICSAVEPATH\n\n$LOCAL23\n$FILE\n" $PROGRESSTEXT"$LOCAL17")
+fi
+
+if [ "$AVFORMAT" = "video" ]; then
+	cd $VIDEOSAVEPATH
+	yt-dlp --rm-cache-dir $PLAYLISTOPT --newline -f $VIDEOFORM -o '%(title)s.%(ext)s' "$URL" | BAR=$($GUI"$TITLETEXTV" $IMAGE $SIZE $PROGRESS"\n$LOCAL5 video:$PLAYFORMAT\n$VIDEOSAVEPATH\n\n$LOCAL23\n$FILE\n" $PROGRESSTEXT"$LOCAL17")
+fi
+
+if [ "$PLAY" = "TRUE" -a "$PLAYLST" = "TRUE" ]; then
+	FILE=$($GUI"$TITLETEXT" $IMAGEV $SIZEDIR $FORM $TXT"$LOCAL8\n" --file-selection --file-filter='*.aac *.flac *.mp3 *.m4a *.opus *.ogg *.wav *.avi *.flv *.mkv *.mp4 *.ogg' | cut -d "|" -f1)
+[ -z $FILE ] && PLAY="FALSE"
+fi
+
+if [ "$PLAY" = "TRUE" ]; then
+	$PLAYER "${FILE%.*}.$PLAYFORMAT"
+fi
+
+if [ "$PLAY" = "FALSE" ]; then
+	if [ "$AVFORMAT" = "audio" ]; then
+		$GUI"$TITLETEXT" $IMAGE $SIZE $INFO $TXT"${FILE%.*}.$PLAYFORMAT\n$LOCAL11" $BUTTONOK
+	else
+		$GUI"$TITLETEXT" $IMAGE $SIZE $INFO $TXT"${FILE%.*}.$PLAYFORMAT\n$LOCAL6" $BUTTONOK
+	fi
+fi
+
+rm -f *.part
+
+exit 0

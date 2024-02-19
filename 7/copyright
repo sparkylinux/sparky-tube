@@ -1,0 +1,81 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: sparky-tube
+Source: https://github.com/sparkylinux/sparky-tube
+
+Upstream Author(s):
+    Elton Fabricio Ferreira 
+    Paweł "pavroo" Pijanowski <pavroo@onet.eu>
+    
+Files: *
+    Copyright (C) 2019 Elton Fabricio Ferreira
+    Copyright (C) 2019 Paweł Pijanowski
+    Copyright (C) 2019 Sajmon
+    License: GPL-3
+
+File: de
+    Copyright (C) 2019 Sajmon
+    License: GPL-3
+
+File: el
+    Copyright 2019 jidan
+    License: GNU GPL-3
+
+File: es
+    Copyright 2021 Leonardo Muñoz
+    License: GNU GPL-3
+    
+File: fr
+    Copyright (C) 2019 hiver <hiver@club-internet.fr>
+    License: GPL-3
+
+File: hu
+    Copyright 2019 Nemomen
+    License: GNU GPL-3
+
+File: it
+    Copyright 2019 Carlo Troiani <troianicarlo@gmail.com>
+    Copyright 2022 Yodel Sinatra <mastodon.uno/@YodelSinatra>
+    License: GNU GPL-3
+
+File: ja
+    Copyright 2019 FuRuYa7
+    License: GNU GPL-3
+
+File: pl
+    Copyright (C) 2019 pavroo <pavroo@onet.eu>
+    License: GPL-3
+
+File: pt_BR
+    Copyright (C) 2019 Elton Fabricio Ferreira
+    License: GPL-3
+
+File: sparky-tube.svg
+    Copyright (C) 2019 lami07
+    License: Creative Commons BY
+
+File: ru
+    Copyright 2019 ChourS2008
+    License: GNU GPL-3
+
+File: uk
+    Copyright 2023 XalisRatt
+    License: GNU GPL-3
+
+License:
+
+    This package is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+ 
+    This package is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+ 
+    You should have received a copy of the GNU General Public License
+    along with this package; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+On Debian systems, the complete text of the GNU General
+Public License can be found in `/usr/share/common-licenses/GPL'.
