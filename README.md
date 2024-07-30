@@ -1,7 +1,7 @@
 Sparky Tube
 Download a video file from a web site and convert it to audio or video output file.
 
-Copyright (C) 2019 Elton Fabricio Ferreira & Paweł Pijanowski
+Copyright (C) 2019-2024 Elton Fabricio Ferreira & Paweł Pijanowski
 Contributors: Elton, Paweł, Sajmon
 
 This program is free software: you can redistribute it and/or modify
