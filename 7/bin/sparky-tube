@@ -3,7 +3,14 @@
 # Created by Elton 2019/01/24
 # Contributors: Elton, pavroo, Sajmon
 # Last update 2024/07/30 by pavroo
+# Last update 2024/11/18 by Fernando Souza - https://www.youtube.com/@fernandosuporte
 # License: GNU GPL 3 
+
+
+which yt-dlp || exit
+which ffplay || exit
+which curl   || exit
+
 
 # get default's locale file
 DEFLOCDIR="/usr/share/sparky/sparky-tube"
@@ -36,7 +43,8 @@ else
 fi
 
 PLAYERSLIST="ffplay"
-for i in celluloid gmplayer kmplayer mpv QMPlay2 rage smplayer totem vlc xine; do
+
+for i in celluloid gmplayer kmplayer mpv QMPlay2 rage smplayer totem vlc xine parole ; do
 	if [ ! -z $(which $i) ]; then
 		PLAYERSLIST="$PLAYERSLIST,$i"
 	fi
