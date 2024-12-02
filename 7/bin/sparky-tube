@@ -21,11 +21,19 @@ which curl      2> /dev/null || { yad --center --window-icon "$logo" --image=dia
 
 
 
+# Função de Ajuda
+
 ajuda(){
 
-echo "Sparky Tube Baixe um arquivo de vídeo de um site e converta-o em um arquivo de saída de áudio ou vídeo.
+# Com problema no Yad abaixo:
 
-Copyright (C) 2019-2024 Elton Fabricio Ferreira & Paweł Pijanowski Colaboradores: Elton, Paweł, Sajmon
+# Copyright (C) 2019-2024 Elton Fabricio Ferreira & Pawex Pijanowski Colaboradores: Elton, Pawex, Sajmon
+
+yad \
+--center \
+--info \
+--title="Ajuda" \
+--text="Sparky Tube Baixe um arquivo de vídeo de um site e converta-o em um arquivo de saída de áudio ou vídeo.
 
 Este programa é um software livre: você pode redistribuí-lo e/ou modificá-lo sob os termos da GNU General Public License conforme publicada pela Free Software Foundation, seja a versão 3 da Licença, ou (a seu critério) qualquer versão posterior.
 
@@ -106,6 +114,7 @@ VIDEOSAVEPATH=`echo $HOME`
 
 YOUDOWN=$($GUI"$TITLETEXT" $SIZE $TXT"$LOCAL2" \
 $IMAGE $FORM --item-separator="," \
+--button=Ajuda:2 \
 --button=Ok \
 $FIELD"<b>URL</b>:" \
 $FIELD"$LOCAL14":CBE \
@@ -126,6 +135,16 @@ PLAYFORMAT=$(echo $YOUDOWN | cut -d'|' -f2 | cut -d: -f2)
 PLAY=$(echo $YOUDOWN | cut -d'|' -f4)
 #playlist
 PLAYLST=$(echo $YOUDOWN | cut -d'|' -f5)
+
+
+
+# Quando o botão "Ajuda" for pressionado, chama a função ajuda
+
+if [ $? -eq 2 ]; then
+    ajuda
+fi
+
+
 
 _getFileName() {
 FILE=$(yt-dlp --no-playlist -o '%(title)s.%(ext)s' -es "$URL" | sed "s/\&/\'&amp;\'/;s/?//")
