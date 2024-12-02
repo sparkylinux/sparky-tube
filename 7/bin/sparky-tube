@@ -138,9 +138,14 @@ PLAYLST=$(echo $YOUDOWN | cut -d'|' -f5)
 
 
 
+
+
+# Verifica o código de saída para determinar qual botão foi pressionado
+RESULTADO=$?
+
 # Quando o botão "Ajuda" for pressionado, chama a função ajuda
 
-if [ $? -eq 2 ]; then
+if [ $RESULTADO -eq 2 ]; then
     ajuda
 fi
 
