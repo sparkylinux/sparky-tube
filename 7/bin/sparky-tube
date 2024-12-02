@@ -6,10 +6,18 @@
 # Last update 2024/11/18 by Fernando Souza - https://www.youtube.com/@fernandosuporte
 # License: GNU GPL 3 
 
+# Melhorias:
 
-which yt-dlp || exit
-which ffplay || exit
-which curl   || exit
+# O script poderia ser internacionalizado (Português do Brasil, Inglês e Espanhol)
+
+
+logo=""
+
+# A verificação do programa deve sugerir ao usuário a instalação de programas ausentes em vez de simplesmente fechar o programa.
+
+which yt-dlp    2> /dev/null || { yad --center --window-icon "$logo" --image=dialog-error --timeout="10" --no-buttons --title "Aviso" --text "Programa yt-dlp não esta instalado."   --width 450 --height 100 2>/dev/null   ; exit ; }
+which ffplay    2> /dev/null || { yad --center --window-icon "$logo" --image=dialog-error --timeout="10" --no-buttons --title "Aviso" --text "Programa ffplay não esta instalado."   --width 450 --height 100 2>/dev/null   ; exit ; }
+which curl      2> /dev/null || { yad --center --window-icon "$logo" --image=dialog-error --timeout="10" --no-buttons --title "Aviso" --text "Programa curl não esta instalado."     --width 450 --height 100 2>/dev/null   ; exit ; }
 
 
 # get default's locale file
