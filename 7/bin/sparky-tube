@@ -29,6 +29,8 @@ ajuda(){
 
 # Copyright (C) 2019-2024 Elton Fabricio Ferreira & Pawex Pijanowski Colaboradores: Elton, Pawex, Sajmon
 
+# Não adicionar o botão Cancelar
+
 yad \
 --center \
 --info \
@@ -40,7 +42,8 @@ Este programa é um software livre: você pode redistribuí-lo e/ou modificá-lo
 Este programa é distribuído na esperança de que seja útil, mas SEM NENHUMA GARANTIA; sem mesmo a garantia implícita de COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM PROPÓSITO ESPECÍFICO. Veja a GNU General Public License para mais detalhes.
 
 Você deve ter recebido uma cópia da GNU General Public License junto com este programa. Se não, veja http://www.gnu.org/licenses/.
-"
+" --button="Ok:0"
+
 }
 
 
@@ -123,6 +126,17 @@ $FIELD"$LOCAL18":CHK \
 "" "audio:mp3,audio:aac,audio:flac,audio:m4a,audio:opus,audio:ogg,audio:wav,video:mp4,video:avi,video:flv,video:mkv,video:ogg" "$PLAYERSLIST" \
 $FIELD"$LOCAL25":CHK)
 
+
+# Verifica o código de saída para determinar qual botão foi pressionado
+RESULTADO=$?
+
+# Quando o botão "Ajuda" for pressionado, chama a função ajuda
+
+if [ $RESULTADO -eq 2 ]; then
+    ajuda && exit
+fi
+
+
 #url
 URL=$(echo $YOUDOWN | cut -d'|' -f1)
 #av players
@@ -136,18 +150,6 @@ PLAY=$(echo $YOUDOWN | cut -d'|' -f4)
 #playlist
 PLAYLST=$(echo $YOUDOWN | cut -d'|' -f5)
 
-
-
-
-
-# Verifica o código de saída para determinar qual botão foi pressionado
-RESULTADO=$?
-
-# Quando o botão "Ajuda" for pressionado, chama a função ajuda
-
-if [ $RESULTADO -eq 2 ]; then
-    ajuda
-fi
 
 
 
