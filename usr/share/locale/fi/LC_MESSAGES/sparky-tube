@@ -1,0 +1,53 @@
+# Suomenkielinen lokalisointitiedosto Sparky Tubelle
+
+# Last update 2024/12/02 by Fernando Souza
+# Viimeisin päivitys 2019/04/07 pavroo
+
+
+LOCAL1="\nyt-dlp-pakettia ei ole asennettu... \n\n Haluatko asentaa nyt?"
+LOCAL2="\nKopioi ja liitä videon osoite alla:\n"
+LOCAL3="\nValitse sijainti, jonka haluat tallentaa:"
+LOCAL4="\nAntamasi URL-osoite on virheellinen!\n Tarkista ja yritä uudelleen!\n\n Poistutaan..."
+LOCAL5="Ladataan ja muunnetaan muotoon:"
+LOCAL6="\nVideosi tallennettu onnistuneesti!\n\n Poistutaan..."
+LOCAL7="\nHaluatko toistaa videon?"
+LOCAL8="\nValitse video:"
+LOCAL9="Kyllä"
+LOCAL10="Ei"
+LOCAL11="\nÄäni tallennettiin onnistuneesti!\n\n Poistutaan..."
+LOCAL12="\nHaluatko toistaa äänen?"
+LOCAL13="\nValitse ääni:"
+LOCAL14="Valitse tulostusmuoto:"
+LOCAL15="Vakiosoitin:"
+LOCAL16="Et ole syöttänyt URL-osoitetta!\n\n Poistutaan..."
+LOCAL17="Odota, kunnes valmis..."
+LOCAL18="Toista latauksen jälkeen"
+LOCAL19="VIRHE"
+LOCAL20="Luetteloiden videot eivät ole saatavilla."
+LOCAL21="Työstämme tätä."
+LOCAL22="Tuntematon virhe."
+LOCAL23="Tiedoston nimi:"
+LOCAL24="Ladataan soittolistasta kohteeseen"
+LOCAL25="Lataa soittolista"
+
+
+LOCAL26="Tuntematon kieli... palautettu:"
+LOCAL27="Huomaa"
+LOCAL28="yt-dlp-ohjelmaa ei ole asennettu."
+LOCAL29="ffplay-ohjelmaa ei ole asennettu."
+LOCAL30="curl-ohjelmaa ei ole asennettu."
+LOCAL31="Auttaa"
+LOCAL32="Sparky Tube Lataa videotiedosto verkkosivustolta ja muunna se ääni- tai videolähtötiedostoksi.
+
+Tämä ohjelma on ilmainen ohjelmisto: voit jakaa sen uudelleen ja/tai muokata sitä Free Software Foundationin julkaiseman GNU General Public License -lisenssin ehtojen mukaisesti, olipa kyseessä sitten lisenssin versio 3 tai (valinnan mukaan) mikä tahansa myöhempi versio.
+
+Tätä ohjelmaa jaetaan siinä toivossa, että siitä on hyötyä, mutta ILMAN MITÄÄN TAKUUTA; ilman edes oletettua takuuta MYYNTIKELPOISUUDESTA tai SOVELTUVUUDESTA TIETTYYN TARKOITUKSEEN. Katso lisätietoja GNU General Public License -lisenssistä.
+
+Sinun olisi pitänyt saada kopio GNU General Public License -lisenssistä tämän ohjelman mukana. Jos ei, katso https://www.gnu.org/licenses/ ."
+
+
+LOCAL33="Kieli"
+
+
+# Comment[fi]=Lataa ja toista videoita YouTubesta
+

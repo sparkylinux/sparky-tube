@@ -1,0 +1,61 @@
+sparky-tube
+└── usr
+    ├── local
+    │   └── bin
+    │       └── sparky-tube.sh
+    └── share
+        ├── applications
+        │   └── sparky-tube.desktop
+        ├── doc
+        │   └── sparky-tube
+        │       ├── ChangeLog
+        │       ├── LICENSE
+        │       ├── README.md
+        │       ├── README.txt
+        │       ├── copyright
+        │       └── install.sh
+        ├── locale
+        │   ├── de
+        │   │   └── LC_MESSAGES
+        │   │       └── sparky-tube
+        │   ├── el
+        │   │   └── LC_MESSAGES
+        │   │       └── sparky-tube
+        │   ├── en_US
+        │   │   └── LC_MESSAGES
+        │   │       └── sparky-tube
+        │   ├── es
+        │   │   └── LC_MESSAGES
+        │   │       └── sparky-tube
+        │   ├── fi
+        │   │   └── LC_MESSAGES
+        │   │       └── sparky-tube
+        │   ├── fr
+        │   │   └── LC_MESSAGES
+        │   │       └── sparky-tube
+        │   ├── hu
+        │   │   └── LC_MESSAGES
+        │   │       └── sparky-tube
+        │   ├── it
+        │   │   └── LC_MESSAGES
+        │   │       └── sparky-tube
+        │   ├── ja
+        │   │   └── LC_MESSAGES
+        │   │       └── sparky-tube
+        │   ├── pl
+        │   │   └── LC_MESSAGES
+        │   │       └── sparky-tube
+        │   ├── pt_BR
+        │   │   └── LC_MESSAGES
+        │   │       ├── pt_BR.po
+        │   │       └── sparky-tube
+        │   ├── ru
+        │   │   └── LC_MESSAGES
+        │   │       └── sparky-tube
+        │   └── uk
+        │       └── LC_MESSAGES
+        │           └── sparky-tube
+        └── pixmaps
+            └── sparky-tube.svg
+
+36 directories, 23 files

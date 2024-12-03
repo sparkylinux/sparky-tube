@@ -1,0 +1,52 @@
+# Polish localization file for Sparky Tube
+
+# Last update 2024/12/02 by Fernando Souza
+# Last update 2019/04/07 by pavroo
+
+LOCAL1="\nPakiet yt-dlp nie jest zainstalowany... \n\n Czy chcesz go zainstalować teraz?"
+LOCAL2="\nSkopiuj adres wideo i wklej go poniżej:\n"
+LOCAL3="\nWybierz miejsce do zapisu pliku:"
+LOCAL4="\nWprowadzony adres URL jest niewłaściwy!\n Proszę to sprawdzić i spróbować ponownie!\n\n Wyjście..."
+LOCAL5="Pobieranie i Konwertowanie do:"
+LOCAL6="\nTwój plik Wideo został poprawnie zapisany!\n\n Wyjście..."
+LOCAL7="\nCzy chcesz odtworzyć plik wideo?"
+LOCAL8="\nWybierz plik wideo:"
+LOCAL9="Tak"
+LOCAL10="Nie"
+LOCAL11="\nTwój plik Audio został poprawnie zapisany!\n\n Wyjście..."
+LOCAL12="\nCzy chcesz odtworzyć plik audio?"
+LOCAL13="\nWybierz plik audio:"
+LOCAL14="Wybierz format wyjściowy:"
+LOCAL15="Odtwarzacz domyślny:"
+LOCAL16="Nie wprowadziłeś żadnego adresu URL!\n\n Wyjście..."
+LOCAL17="Proszę czekać aż skończy..."
+LOCAL18="Odtwórz po pobraniu"
+LOCAL19="BŁĄD"
+LOCAL20="Wideo z listy nie jest dostępne."
+LOCAL21="Pracujemy nad tym."
+LOCAL22="Nieznany błąd."
+LOCAL23="Nazwa pliku:"
+LOCAL24="Pobieranie z playlisty do"
+LOCAL25="Pobierz Playlistę"
+
+
+LOCAL26="Niezidentyfikowany język... zwrócony:"
+LOCAL27="Ogłoszenie"
+LOCAL28="Program yt-dlp nie jest zainstalowany."
+LOCAL29="program ffplay nie jest zainstalowany."
+LOCAL30="program curl nie jest zainstalowany."
+LOCAL31="Pomoc"
+LOCAL32="Sparky Tube Pobierz plik wideo ze strony internetowej i przekonwertuj go na wyjściowy plik audio lub wideo.
+
+Ten program jest wolnym oprogramowaniem: możesz go redystrybuować i/lub modyfikować zgodnie z warunkami Powszechnej Licencji Publicznej GNU opublikowanej przez Fundację Wolnego Oprogramowania, niezależnie od tego, czy jest to wersja 3 Licencji, czy (według własnego uznania) jakakolwiek późniejsza wersja.
+
+Ten program jest rozpowszechniany w nadziei, że będzie przydatny, ale BEZ ŻADNEJ GWARANCJI; nawet bez dorozumianej gwarancji PRZYDATNOŚCI HANDLOWEJ lub PRZYDATNOŚCI DO OKREŚLONEGO CELU. Więcej szczegółów znajdziesz w Powszechnej Licencji Publicznej GNU.
+
+Wraz z tym programem powinieneś otrzymać kopię Powszechnej Licencji Publicznej GNU. Jeśli nie, zobacz https://www.gnu.org/licenses/ ."
+
+
+LOCAL33="Język"
+
+
+# Comment[pl]=Pobieraj i odtwarzaj filmy z YouTube
+

@@ -1,0 +1,49 @@
+# German localization file for Sparky Tube by Sajmon
+
+# Last update 2024/12/02 by Fernando Souza
+# Last update 2019/04/07 by pavroo
+
+LOCAL1="\nDas yt-dlp-Paket ist nicht installiert.... \n\n Möchten Sie es jetzt installieren?"
+LOCAL2="\nVideo link kopieren und einfügen:\n"
+LOCAL3="\nWählen Sie einen Ort zum Speichern der Datei aus:"
+LOCAL4="\nDie von Ihnen eingegebene URL ist falsch!\n Bitte überprüfen Sie dies und versuchen Sie es erneut!\n\n Beenden..."
+LOCAL5="Herunterladen und Konvertieren nach:"
+LOCAL6="\nIhre Videodatei wurde korrekt gespeichert!\n\n Beenden..."
+LOCAL7="\nMöchten Sie das Video abspielen?"
+LOCAL8="\nWählen Sie eine Videodatei aus:"
+LOCAL9="Ja"
+LOCAL10="Nein"
+LOCAL11="\nIhre Audiodatei wurde korrekt gespeichert!\n\n Beenden..."
+LOCAL12="\nMöchten Sie die Audiodatei abspielen?"
+LOCAL13="\nEine Audiodatei auswählen:"
+LOCAL14="Ausgabeformat auswählen:"
+LOCAL15="Standart Player:"
+LOCAL16="Du hast keine URL eingegeben!\n\n Beenden..."
+LOCAL17="Bitte warten Sie, bis es fertig ist..."
+LOCAL18="Abspielen nach Download"
+LOCAL19="FEHLER"
+LOCAL20="Videos aus den Listen sind zurzeit nicht verfügbar."
+LOCAL21="Wir arbeiten daran."
+LOCAL22="Unbekannte fehler."
+LOCAL23="Dateiname:"
+LOCAL24="Herunterladen von der Wiedergabeliste nach"
+LOCAL25="Download Playlist"
+
+LOCAL26="Unbekannte Sprache... zurückgegeben:"
+LOCAL27="Beachten"
+LOCAL28="Das yt-dlp-Programm ist nicht installiert."
+LOCAL29="Das ffplay-Programm ist nicht installiert."
+LOCAL30="Das Curl-Programm ist nicht installiert."
+LOCAL31="Helfen"
+LOCAL32="Sparky Tube Laden Sie eine Videodatei von einer Website herunter und konvertieren Sie sie in eine Audio- oder Videoausgabedatei.
+
+Dieses Programm ist freie Software: Sie dürfen es unter den Bedingungen der GNU General Public License, wie von der Free Software Foundation veröffentlicht, weiterverbreiten und/oder ändern, unabhängig davon, ob Version 3 der Lizenz oder (nach Ihrer Wahl) eine spätere Version.
+
+Dieses Programm wird in der Hoffnung verbreitet, dass es nützlich ist, jedoch OHNE JEGLICHE GARANTIE; ohne die stillschweigende Garantie der MARKTGÄNGIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK. Weitere Einzelheiten finden Sie in der GNU General Public License.
+
+Sie sollten zusammen mit diesem Programm eine Kopie der GNU General Public License erhalten haben. Wenn nicht, siehe https://www.gnu.org/licenses/ ."
+
+
+LOCAL33="Sprache"
+
+# Comment[de]=Laden Sie Videos von YouTube herunter und spielen Sie ab

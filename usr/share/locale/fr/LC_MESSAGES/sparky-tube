@@ -1,0 +1,56 @@
+﻿# Fichier de localisation française de Sparky Tube.
+# Copyright 2019 hiver <hiver@club-internet.fr> 2019/03/03
+# Sous licence GNU GPL v2
+
+# Last update 2024/12/02 by Fernando Souza
+# Last update 2019/04/07 by pavroo
+
+
+LOCAL1="\nLe paquet yt-dlp n'est pas installé... \n\n Voulez-vous l'installer maintenant?"
+LOCAL2="\nCopiez et collez l'adresse de la vidéo ci-dessous:\n"
+LOCAL3="\nChoississez l'emplacement où enregistrer le fichier:"
+LOCAL4="\nL'URL entrée n'est pas valide!\n S'il vous plaît, vérifiez et réessayez!\n\n Sortie..."
+LOCAL5="Téléchargement et conversion en:"
+LOCAL6="\nVotre vidéo a été enregistrée avec succès!"
+LOCAL7="\nVoulez-vous jouez la vidéo?"
+LOCAL8="\nSélectionnez la vidéo:"
+LOCAL9="Oui"
+LOCAL10="Non"
+LOCAL11="\nVotre fichier Audio a été enregistrée avec succès!"
+LOCAL12="\nVoulez-vous jouez le fichier audio?"
+LOCAL13="\nSélectionnez le fichier audio:"
+LOCAL14="Choississez un format de sortie audio:"
+LOCAL15="Choississez un format de sortie vidéo:"
+LOCAL16="Vous n'avez rentré aucune URL!\n\n Sortie..."
+LOCAL17="Veuillez patienter jusqu'à la fin..."
+LOCAL18="Play after downloading"
+LOCAL19="ERROR"
+LOCAL20="Videos from the lists are not available."
+LOCAL21="We are working on this."
+LOCAL22="Unknown error."
+LOCAL23="File name:"
+LOCAL24="Downloading from playlist to"
+LOCAL25="Download Playlist"
+
+
+LOCAL26="Langue non identifiée... renvoyée :"
+LOCAL27="Avis"
+LOCAL28="Le programme yt-dlp n'est pas installé."
+LOCAL29="Le programme ffplay n'est pas installé."
+LOCAL30="Le programme curl n'est pas installé."
+LOCAL31="Aide"
+LOCAL32="Sparky Tube Téléchargez un fichier vidéo à partir d'un site Web et convertissez-le en fichier de sortie audio ou vidéo.
+
+Ce programme est un logiciel libre : vous pouvez le redistribuer et/ou le modifier selon les termes de la licence publique générale GNU telle que publiée par la Free Software Foundation, qu'il s'agisse de la version 3 de la licence ou (à votre choix) de toute version ultérieure.
+
+Ce programme est distribué dans l'espoir qu'il sera utile, mais SANS AUCUNE GARANTIE ; sans même la garantie implicite de QUALITÉ MARCHANDE ou d’ADAPTATION À UN USAGE PARTICULIER. Voir la licence publique générale GNU pour plus de détails.
+
+Vous devriez avoir reçu une copie de la licence publique générale GNU avec ce programme. Sinon, consultez https://www.gnu.org/licenses/ ."
+
+
+
+LOCAL33="Langue"
+
+
+# Comment[fr]=Téléchargez et lisez des vidéos de YouTube
+

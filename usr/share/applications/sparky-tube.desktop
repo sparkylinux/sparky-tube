@@ -1,0 +1,21 @@
+[Desktop Entry]
+Name=Sparky Tube
+GenericName=Sparky Tube
+Comment=Download and play videos from YouTube
+Comment[de]=Laden Sie Videos von YouTube herunter und spielen Sie ab
+Comment[el]=Κατεβάζει και παίζει βίντεο από το YouTube
+Comment[fi]=Lataa ja toista videoita YouTubesta
+Comment[fr]=Téléchargez et lisez des vidéos de YouTube
+Comment[it]=Scarica e riproduce video da YouTube
+Comment[ja]=YouTube 動画をダウンロードおよび再生します
+Comment[pl]=Pobieraj i odtwarzaj filmy z YouTube
+Comment[pt_BR]=Baixar e reproduzir videos do YouTube
+Comment[pt_PT]=Faça o download e reproduza vídeos do YouTube
+Comment[ru]=Скачивание и воспроизводение видео с YouTube
+Comment[uk]=Завантаження та відтворення відео з YouTube
+Type=Application
+Terminal=false
+Exec=/usr/local/bin/sparky-tube.sh
+Icon=sparky-tube
+Keywords=video;internet;download;youtube;sparky-tube
+Categories=GTK;AudioVideo;Player;Video;

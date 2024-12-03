@@ -1,0 +1,50 @@
+# Arquivo de localização para o Português do Brasil do Sparky MP4.
+
+# Last update 2024/12/02 by Fernando Souza
+# Last update 2019/05/03 by pavroo
+
+LOCAL1="\nO pacote yt-dlp não está instalado... \n\n Você deseja instalar agora?"
+LOCAL2="\nCopie e cole o endereço do vídeo abaixo:\n"
+LOCAL3="\nEscolha o local desejado para salvar:"
+LOCAL4="\nA URL inserida é inválida!\n Verifique e tente novamente!\n\n Saindo..."
+LOCAL5="Baixando e Convertendo para:"
+LOCAL6="\nSeu Video foi salvo com sucesso!"
+LOCAL7="\nVocê deseja reproduzir o vídeo?"
+LOCAL8="\nSelecione o vídeo:"
+LOCAL9="Sim"
+LOCAL10="Não"
+LOCAL11="\nSeu Audio foi salvo com sucesso!"
+LOCAL12="\nVocê deseja reproduzir o áudio?"
+LOCAL13="\nSelecione o áudio:"
+LOCAL14="Escolha um formato de áudio:"
+LOCAL15="Escolha um formato de vídeo:"
+LOCAL16="Você não inseriu alguma URL!\n\nSaindo..."
+LOCAL17="Por favor, aguarde até completar..."
+LOCAL18="Reproduzir depois que baixar"
+LOCAL19="ERRO"
+LOCAL20="Vídeos da lista não estão disponíveis."
+LOCAL21="Estamos trabalhando nisso."
+LOCAL22="Erro desconhecido."
+LOCAL23="Nome do Arquivo:"
+LOCAL24="Baixando da playlist para"
+LOCAL25="Baixar Playlist"
+
+
+LOCAL26="Idioma não identificado... retornou:"
+LOCAL27="Aviso"
+LOCAL28="Programa yt-dlp não esta instalado."
+LOCAL29="Programa ffplay não esta instalado."
+LOCAL30="Programa curl não esta instalado."
+LOCAL31="Ajuda"
+LOCAL32="Sparky Tube Baixe um arquivo de vídeo de um site e converta-o em um arquivo de saída de áudio ou vídeo.
+
+Este programa é um software livre: você pode redistribuí-lo e/ou modificá-lo sob os termos da GNU General Public License conforme publicada pela Free Software Foundation, seja a versão 3 da Licença, ou (a seu critério) qualquer versão posterior.
+
+Este programa é distribuído na esperança de que seja útil, mas SEM NENHUMA GARANTIA; sem mesmo a garantia implícita de COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM PROPÓSITO ESPECÍFICO. Veja a GNU General Public License para mais detalhes.
+
+Você deve ter recebido uma cópia da GNU General Public License junto com este programa. Se não, veja https://www.gnu.org/licenses/ ."
+
+LOCAL33="Idioma"
+
+
+# Comment[pt_BR]=Baixar e reproduzir videos do YouTube

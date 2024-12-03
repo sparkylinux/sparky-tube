@@ -1,0 +1,54 @@
+# Japanese localization file for Sparky Tube
+
+# Last update 2024/12/02 by Fernando Souza
+# Last update 2019/04/07 by pavroo
+# Translated to Japanese by FuRuYa7.
+
+LOCAL1="\nyt-dlp パッケージがインストールされていません...\n\n今すぐインストールしますか？"
+LOCAL2="\n以下の動画のURL をコピーして貼り付けてください:\n"
+LOCAL3="\n保存する場所を選択します:"
+LOCAL4="\n入力したURL は無効です！\n確認してからもう一度試してください！\n\n\終了しています..."
+LOCAL5="ダウンロードして変換します:"
+LOCAL6="\n動画は正常に保存されました！\n\n終了しています..."
+LOCAL7="\n動画を再生しますか？"
+LOCAL8="\n動画を選択:"
+LOCAL9="はい"
+LOCAL10="いいえ"
+LOCAL11="\n音声は正常に保存されました！\n\n終了しています..."
+LOCAL12="\n音声を再生しますか？"
+LOCAL13="\n音声を選択:"
+LOCAL14="出力形式を選択します:"
+LOCAL15="標準プレーヤー:"
+LOCAL16="URL を入力していません！\n\n終了しています..."
+LOCAL17="完了するまでお待ちください..."
+LOCAL18="ダウンロード後に再生します"
+LOCAL19="エラー"
+LOCAL20="リストの動画は利用できません。"
+LOCAL21="これに取り組んでいます。"
+LOCAL22="不明なエラー。"
+LOCAL23="ファイル名:"
+LOCAL24="プレイリストからダウンロードします"
+LOCAL25="プレイリストをダウンロードします"
+
+
+LOCAL26="不明な言語... が返されました:"
+LOCAL27="知らせ"
+LOCAL28="yt-dlp プログラムがインストールされていません。"
+LOCAL29="ffplay プログラムがインストールされていません。"
+LOCAL30="カールプログラムがインストールされていません。"
+LOCAL31="ヘルプ"
+LOCAL32="Sparky Tube Web サイトからビデオ ファイルをダウンロードし、オーディオまたはビデオ出力ファイルに変換します。
+
+このプログラムはフリー ソフトウェアです。ライセンスのバージョン 3 であっても、(お客様の選択により) それ以降のバージョンであっても、Free Software Foundation によって公開されている GNU General Public License の条項に基づいて、再配布したり変更したりすることができます。
+
+このプログラムは役立つことを期待して配布されていますが、いかなる保証もありません。商品性や特定目的への適合性についての暗黙の保証もありません。詳細については、GNU 一般公衆利用許諾書を参照してください。
+
+このプログラムと一緒に GNU 一般公衆利用許諾書のコピーも受け取っているはずです。そうでない場合は、https://www.gnu.org/licenses/ を参照してください。"
+
+
+LOCAL33="言語"
+
+
+### .desktop file to be translated too
+# Comment[ja_JP]=YouTube 動画をダウンロードおよび再生します
+

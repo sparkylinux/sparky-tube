@@ -1,0 +1,52 @@
+# English localization file for Sparky Tube
+
+# Last update 2024/12/02 by Fernando Souza
+# Last update 2019/04/07 by pavroo
+
+LOCAL1="\nThe yt-dlp package is not installed... \n\n Do you want to install now?"
+LOCAL2="\nCopy and paste the video address below:\n"
+LOCAL3="\nChoose the location you want to save:"
+LOCAL4="\nThe URL you entered is invalid!\n Please check and try again!\n\n Exiting..."
+LOCAL5="Downloading and Converting to:"
+LOCAL6="\nYour Video was successfully saved!\n\n Exiting..."
+LOCAL7="\nDo you want to play the video?"
+LOCAL8="\nSelect the video:"
+LOCAL9="Yes"
+LOCAL10="No"
+LOCAL11="\nYour Audio was successfully saved!\n\n Exiting..."
+LOCAL12="\nDo you want to play the audio?"
+LOCAL13="\nSelect the audio:"
+LOCAL14="Choose an output format:"
+LOCAL15="Standard Player:"
+LOCAL16="You have not entered any URL!\n\n Exiting..."
+LOCAL17="Please wait until complite..."
+LOCAL18="Play after downloading"
+LOCAL19="ERROR"
+LOCAL20="Videos from the lists are not available."
+LOCAL21="We are working on this."
+LOCAL22="Unknown error."
+LOCAL23="File name:"
+LOCAL24="Downloading from playlist to"
+LOCAL25="Download Playlist"
+
+
+LOCAL26="Unidentified language... returned:"
+LOCAL27="Notice"
+LOCAL28="yt-dlp program is not installed."
+LOCAL29="ffplay program is not installed."
+LOCAL30="Curl program is not installed."
+LOCAL31="Help"
+LOCAL32="Sparky Tube Download a video file from a website and convert it to an audio or video output file.
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/ ."
+
+
+LOCAL33="Language"
+
+
+# Comment[en]=Download and play videos from YouTube
+
