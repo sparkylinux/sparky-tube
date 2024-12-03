@@ -6,4 +6,4 @@ Este programa é um software livre: você pode redistribuí-lo e/ou modificá-lo
 
 Este programa é distribuído na esperança de que seja útil, mas SEM NENHUMA GARANTIA; sem mesmo a garantia implícita de COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM PROPÓSITO ESPECÍFICO. Veja a GNU General Public License para mais detalhes.
 
-Você deve ter recebido uma cópia da GNU General Public License junto com este programa. Se não, veja http://www.gnu.org/licenses/.
+Você deve ter recebido uma cópia da GNU General Public License junto com este programa. Se não, veja https://www.gnu.org/licenses/.
