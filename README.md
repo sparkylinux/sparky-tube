@@ -1,18 +1,12 @@
-Sparky Tube
-Download a video file from a web site and convert it to audio or video output file.
+**Sparky Tube** Baixe um arquivo de vídeo de um site e converta-o em um arquivo de saída de áudio ou vídeo.
 
-Copyright (C) 2019-2024 Elton Fabricio Ferreira & Paweł Pijanowski
-Contributors: Elton, Paweł, Sajmon
+Copyright (C) 2019-2024 Elton Fabricio Ferreira & Paweł Pijanowski Colaboradores: Elton, Paweł, Sajmon
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+Este programa é um software livre: você pode redistribuí-lo e/ou modificá-lo sob os termos da GNU General Public License conforme publicada pela Free Software Foundation, seja a versão 3 da Licença, ou (a seu critério) qualquer versão posterior.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+Este programa é distribuído na esperança de que seja útil, mas SEM NENHUMA GARANTIA; sem mesmo a garantia implícita de COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM PROPÓSITO ESPECÍFICO. Veja a GNU General Public License para mais detalhes.
 
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
+Você deve ter recebido uma cópia da GNU General Public License junto com este programa. Se não, veja https://www.gnu.org/licenses/.
+
+
+https://sparkylinux.org/sparky-tube/
