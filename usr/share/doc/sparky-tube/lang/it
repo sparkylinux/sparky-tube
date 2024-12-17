@@ -1,0 +1,32 @@
+# File di localizzazione in italiano per Sparky Tube
+# Last update 2019/11/16 by Carlo
+# Copyright 2019 Carlo Troiani <troianicarlo@gmail.com>
+# Rilasciato sotto licenza GNU GPL v2
+# Ultimo aggiornamento 2022/05/18 by Yodel Sinatra <mastodon.uno/@YodelSinatra>
+LOCAL1="\nIl pacchetto youtube-dl non è installato... \n\n Vuoi installarlo adesso?"
+LOCAL2="\nCopia e incolla l'indirizzo del video qui sotto:\n"
+LOCAL3="\nScegli la cartella dove vuoi salvarlo:"
+LOCAL4="\nURL inserito non valido!\n Per favore controlla e riprova!\n\n Puoi uscire..."
+LOCAL5="Lo sto scaricando e convertendolo in:"
+LOCAL6="\nIl tuo Video è stato salvato correttamente!\n\n Puoi uscire..."
+LOCAL7="\nVuoi riprodurre il video?"
+LOCAL8="\nSeleziona il video:"
+LOCAL9="Si'"
+LOCAL10="No"
+LOCAL11="\nIl tuo file Audio è stato salvato correttamente!\n\nPuoi uscire..."
+LOCAL12="\nVuoi riprodurre il file audio?"
+LOCAL13="\nSeleziona il file audio:"
+LOCAL14="Scegli in quale formato convertirlo:"
+LOCAL15="Standard Player:"
+LOCAL16="Non hai inserito URL!\n\n Puoi uscire..."
+LOCAL17="Per favore, aspetta fino al completamento..."
+LOCAL18="Riproduci dopo il download"
+LOCAL19="ERRORE"
+LOCAL20="I video della lista non sono disponibili."
+LOCAL21="Ci stiamo lavorando."
+LOCAL22="Errore sconosciuto."
+LOCAL23="Nome del file:"
+LOCAL24="Sto scaricando dalla playlist a"
+LOCAL25="Scarica la Playlist"
+#
+#Comment[it]=Scarica e riproduce video da YouTube

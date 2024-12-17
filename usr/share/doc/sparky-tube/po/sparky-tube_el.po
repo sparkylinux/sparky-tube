@@ -1,0 +1,479 @@
+# Este é um arquivo de tradução para o idioma grego.
+#
+# Tradutor: Fernando Souza <>
+# Data de criação: 10-12-2024
+#
+# Para mais informações sobre como usar este arquivo, consulte a documentação do Gettext.
+# 
+# 
+# Explicação do Arquivo .po
+# 
+#     Cabeçalho:
+# 
+#         O cabeçalho fornece informações sobre o arquivo, como o idioma da tradução (Language: pt_BR), a codificação do arquivo (charset=UTF-8), e o tipo de transferência de conteúdo.
+#         Comentários são precedidos por #, e são usados para fornecer informações sobre o arquivo ou para orientar o tradutor.
+# 
+#     msgid e msgstr:
+# 
+#         msgid: Representa a string original que será traduzida.
+#         msgstr: Representa a tradução da string para o idioma de destino (neste caso, o português).
+
+
+# msgfmt --check --verbose sparky-tube.po
+
+# $ msgfmt --check --verbose sparky-tube.po
+# 39 mensagens traduzidas.
+
+
+# msgfmt -o  sparky-tube.mo sparky-tube.po
+
+
+# Copyright (C) 2024 Free Software Foundation, Inc.
+# Autor: Fernando Souza <>
+# Data de criação: 2024-12-10
+# Traduzido por: Sua Equipe de Tradução
+# Última revisão por: Fernando Souza <>
+# Linguagem: el
+# Equipe de tradução: Equipe de Tradução de 
+# Versão do projeto: 1.0
+# Versão do pacote: 1.0
+# Data da revisão PO: 2024-12-10
+# MIME-Version: 1.0
+# Charset: UTF-8
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Sparky Tube 1.0\n"
+"PO-Revision-Date: 2024-12-10 12:00+0000\n"
+"Last-Translator: Fernando Souza <>\n"
+"Language-Team: Equipe de Tradução de \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+
+
+
+
+
+# Tradução da string "" sparky-tube.sh:716
+msgid "Copy and paste the video address below:"
+msgstr "Αντιγράψτε και επικολλήστε την παρακάτω διεύθυνση βίντεο:"
+
+# Tradução da string "" sparky-tube.sh:1071  - Não funcionou
+msgid "\nThe URL you entered is invalid!\nPlease check and try again!\n\nExiting..."
+msgstr "\nΗ διεύθυνση URL που εισαγάγατε δεν είναι έγκυρη!\nΕλέγξτε και δοκιμάστε ξανά!\n\nΈξοδος..."
+
+
+# sparky-tube.sh:1099 e 1147
+msgid "Downloading and Converting to:" 
+msgstr "Λήψη και μετατροπή σε:" 
+
+
+# sparky-tube.sh:1291
+msgid "Your audio has been successfully saved to" 
+msgstr "Ο ήχος σας αποθηκεύτηκε με επιτυχία στο" 
+
+# sparky-tube.sh:1295
+msgid "Your video has been successfully saved to"
+msgstr "Το βίντεό σας αποθηκεύτηκε με επιτυχία στο"
+
+
+# sparky-tube.sh:
+msgid "OK"
+msgstr "ΕΝΤΑΞΕΙ"
+
+# Mensagem para uma opção de menu
+
+# sparky-tube.sh:725
+msgid "To go out" 
+msgstr "Εξοδος" 
+
+
+# sparky-tube.sh:719 e 899
+msgid "Choose an audio or video format" 
+msgstr "Επιλέξτε μια μορφή ήχου ή βίντεο" 
+
+
+# sparky-tube.sh:919 - Não funcionou
+msgid "You have not entered any URL!   Exiting..." 
+msgstr "Δεν έχετε εισαγάγει καμία διεύθυνση URL!   Έξοδος..." 
+
+
+# sparky-tube.sh:1100 e 1148
+msgid "Please wait until complite..." 
+msgstr "Περιμένετε μέχρι να ολοκληρωθεί..." 
+
+# sparky-tube.sh:720 - Não funcionou
+msgid "Play after downloading" 
+msgstr "Παίξτε μετά τη λήψη" 
+
+# sparky-tube.sh:1009 e 1183
+msgid "ERROR" 
+msgstr "ΣΦΑΛΜΑ" 
+
+# sparky-tube.sh:721 , 901 e 954
+msgid "Download Playlist" 
+msgstr "Λήψη λίστας αναπαραγωγής" 
+
+# sparky-tube.sh:287, 1112, 1217, 1237
+msgid "Notice" 
+msgstr "Ανακοίνωση" 
+
+
+# sparky-tube.sh:575 e 726
+msgid "Help" 
+msgstr "Βοήθεια" 
+
+# sparky-tube.sh:
+msgid "Media Player" 
+msgstr "Media Player" 
+
+
+# sparky-tube.sh:
+msgid "Unidentified language... returned" 
+msgstr "Αγνώστου ταυτότητας γλώσσα... επέστρεψε" 
+
+# sparky-tube.sh:
+msgid "yt-dlp program is not installed." 
+msgstr "Το πρόγραμμα yt-dlp δεν είναι εγκατεστημένο." 
+
+
+# sparky-tube.sh:
+msgid "ffplay program is not installed." 
+msgstr "Το πρόγραμμα ffplay δεν είναι εγκατεστημένο." 
+
+# sparky-tube.sh:
+msgid "Curl program is not installed." 
+msgstr "Το πρόγραμμα Curl δεν είναι εγκατεστημένο." 
+
+
+# sparky-tube.sh:
+msgid "Notify-send program is not installed." 
+msgstr "Το πρόγραμμα Notify-Send δεν έχει εγκατασταθεί." 
+
+# sparky-tube.sh:
+msgid "Sed program is not installed." 
+msgstr "Το πρόγραμμα Sed δεν έχει εγκατασταθεί." 
+
+
+# sparky-tube.sh:
+msgid "Ping program is not installed." 
+msgstr "Το πρόγραμμα ping δεν είναι εγκατεστημένο." 
+
+# sparky-tube.sh:
+msgid "You-get program is not installed." 
+msgstr "Το πρόγραμμα You-get δεν έχει εγκατασταθεί." 
+
+
+# sparky-tube.sh: - Não funcionou
+msgid "No Internet Access" 
+msgstr "Χωρίς πρόσβαση στο Διαδίκτυο" 
+
+# sparky-tube.sh:
+msgid "You are not connected to the Internet!" 
+msgstr "Δεν είστε συνδεδεμένοι στο Διαδίκτυο!" 
+
+
+# sparky-tube.sh:727
+msgid "Infor" 
+msgstr "Infor" 
+
+# sparky-tube.sh:244 e 806
+msgid "System" 
+msgstr "Σύστημα" 
+
+
+# sparky-tube.sh:246
+msgid "Kernel version" 
+msgstr "Έκδοση πυρήνα" 
+
+# sparky-tube.sh:
+msgid "Processor Architecture" 
+msgstr "Αρχιτεκτονική Επεξεργαστή" 
+
+
+# sparky-tube.sh:
+msgid "YT-DLP Version" 
+msgstr "Έκδοση YT-DLP" 
+
+# sparky-tube.sh:
+msgid "No player configured." 
+msgstr "Δεν έχει διαμορφωθεί πρόγραμμα αναπαραγωγής." 
+
+
+# sparky-tube.sh:110
+msgid "Language" 
+msgstr "Γλώσσα" 
+
+
+
+# sparky-tube.sh:630
+
+# Função ajuda
+
+# Traduzir o texto longo com gettext por partes (essa parte esta funcionando)
+
+
+msgid "Sparky Tube downloads a video file from a website and converts it into an audio or video output file."
+msgstr "Το Sparky Tube κατεβάζει ένα αρχείο βίντεο από έναν ιστότοπο και το μετατρέπει σε αρχείο εξόδου ήχου ή βίντεο."
+
+msgid "This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License." 
+msgstr "Αυτό το πρόγραμμα είναι ελεύθερο λογισμικό: μπορείτε να το αναδιανείμετε ή/και να το τροποποιήσετε σύμφωνα με τους όρους της Γενικής Δημόσιας Άδειας GNU." 
+
+msgid "as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version." 
+msgstr "όπως δημοσιεύτηκε από το Ίδρυμα Ελεύθερου Λογισμικού, είτε την έκδοση 3 της Άδειας χρήσης είτε (κατ' επιλογή σας) οποιαδήποτε μεταγενέστερη έκδοση." 
+
+msgid "This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty"
+msgstr "Αυτό το πρόγραμμα διανέμεται με την ελπίδα ότι θα είναι χρήσιμο, αλλά ΧΩΡΙΣ ΚΑΜΙΑ ΕΓΓΥΗΣΗ. χωρίς καν την σιωπηρή εγγύηση"
+
+msgid "of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details."
+msgstr "ΕΜΠΟΡΕΥΣΙΜΟΤΗΤΑΣ ή ΚΑΤΑΛΛΗΛΟΤΗΤΑΣ ΓΙΑ ΣΥΓΚΕΚΡΙΜΕΝΟ ΣΚΟΠΟ. Δείτε τη Γενική Δημόσια Άδεια GNU για περισσότερες λεπτομέρειες."
+
+
+msgid "You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/."
+msgstr "Θα έπρεπε να έχετε λάβει ένα αντίγραφο της Γενικής Δημόσιας Άδειας GNU μαζί με αυτό το πρόγραμμα. Εάν όχι, ανατρέξτε στη διεύθυνση https://www.gnu.org/licenses/."
+
+
+
+# O Sparky Tube baixa um arquivo de vídeo de um site e o converte em um arquivo de saída de áudio ou vídeo.
+
+# Este programa é software livre: você pode redistribuí-lo e/ou modificá-lo sob os termos da 
+# Licença Pública Geral GNU conforme publicada pela Free Software Foundation, seja na versão 3 
+# da Licença ou (a seu critério) qualquer versão posterior.
+
+# Este programa é distribuído na esperança de que seja útil, mas SEM QUAISQUER GARANTIAS; sem 
+# mesmo a garantia implícita de COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM FIM ESPECÍFICO. Veja a 
+# Licença Pública Geral GNU para mais detalhes.
+
+# Você deve ter recebido uma cópia da Licença Pública Geral GNU junto com este programa. Se 
+# não, veja https://www.gnu.org/licenses/.
+
+
+
+
+# sparky-tube.sh:1263
+msgid "Playing Video/Audio file..." 
+msgstr "Αναπαραγωγή αρχείου βίντεο/ήχου..." 
+
+
+# sparky-tube.sh:1070
+msgid "Downloading audio..." 
+msgstr "Λήψη ήχου..." 
+
+
+
+# sparky-tube.sh:211
+msgid "Logo not found at %s. Check path." 
+msgstr "Το λογότυπο δεν βρέθηκε στο %s. Ελέγξτε τη διαδρομή." 
+
+
+# sparky-tube.sh: - Não funcionou
+msgid "Folder %s not found. Check the path." 
+msgstr "Ο φάκελος %s δεν βρέθηκε. Ελέγξτε τη διαδρομή." 
+
+
+
+# Valor nulo para reproduzir arquivo de Vídeo/Aúdio
+
+# sparky-tube.sh:
+msgid "None" 
+msgstr "Κανένας" 
+
+# sparky-tube.sh:
+msgid "Yes"
+msgstr "Ναί"
+
+
+# sparky-tube.sh:
+msgid "No"
+msgstr "Οχι"
+
+
+# sparky-tube.sh:346
+msgid "No yt-dlp processes found."
+msgstr "Δεν βρέθηκαν διαδικασίες yt-dlp."
+
+# sparky-tube.sh:356
+msgid "No you-get processes found."
+msgstr "Δεν βρέθηκαν διαδικασίες You-get."
+
+
+# sparky-tube.sh:483
+msgid "Checking if user is connected to the internet..."
+msgstr "Έλεγχος εάν ο χρήστης είναι συνδεδεμένος στο διαδίκτυο..."
+
+
+# sparky-tube.sh:491
+msgid "Connected to the Internet"
+msgstr "Συνδεδεμένο στο Διαδίκτυο"
+
+
+# sparky-tube.sh:
+msgid "\nThe yt-dlp package is not installed... \n\nDo you want to install now?"
+msgstr "\nΤο πακέτο yt-dlp δεν έχει εγκατασταθεί... \n\nΘέλετε να το εγκαταστήσετε τώρα;"
+
+
+# sparky-tube.sh:
+msgid "\nCopy and paste the video address below:\n"
+msgstr "\nΑντιγράψτε και επικολλήστε την παρακάτω διεύθυνση βίντεο:\n"
+
+
+# sparky-tube.sh:
+msgid "\nChoose the location you want to save:"
+msgstr "\nΕπιλέξτε την τοποθεσία που θέλετε να αποθηκεύσετε:"
+
+
+
+# sparky-tube.sh:
+msgid "\nDo you want to play the video?"
+msgstr "\nΘέλετε να παίξετε το βίντεο;"
+
+
+# sparky-tube.sh:
+msgid "\nSelect the video:"
+msgstr "\nΕπιλέξτε το βίντεο:"
+
+
+
+# sparky-tube.sh:
+msgid "\nDo you want to play the audio?"
+msgstr "\nΘέλετε να παίξετε τον ήχο;"
+
+
+# sparky-tube.sh:
+msgid "\nSelect the audio:"
+msgstr "\nΕπιλέξτε τον ήχο:"
+
+
+# sparky-tube.sh:
+msgid "Videos from the lists are not available."
+msgstr "Τα βίντεο από τις λίστες δεν είναι διαθέσιμα."
+
+
+
+# sparky-tube.sh:
+msgid "We are working on this."
+msgstr "Εργαζόμαστε πάνω σε αυτό."
+
+
+
+# sparky-tube.sh:1027
+msgid "Unknown error."
+msgstr "Άγνωστο σφάλμα."
+
+
+# sparky-tube.sh:
+msgid "File name"
+msgstr "Όνομα αρχείου"
+
+
+# sparky-tube.sh:
+msgid "Downloading from playlist to"
+msgstr "Λήψη από λίστα αναπαραγωγής σε"
+
+
+# sparky-tube.sh:149
+msgid "Using language"
+msgstr "Χρήση γλώσσας"
+
+
+
+# sparky-tube.sh:1044
+
+msgid "Audio quality is usually determined by the bit rate (the higher the bit rate, the better the quality)."
+msgstr "Η ποιότητα του ήχου καθορίζεται συνήθως από τον ρυθμό μετάδοσης bit (όσο υψηλότερος είναι ο ρυθμός μετάδοσης bit, τόσο καλύτερη είναι η ποιότητα)."
+
+msgid "For video quality, the main criteria are resolution and codec."
+msgstr "Για την ποιότητα του βίντεο, τα κύρια κριτήρια είναι η ανάλυση και ο κωδικοποιητής."
+
+
+# sparky-tube.sh:1083
+msgid "Please wait while the audio is downloading."
+msgstr "Περιμένετε όσο γίνεται λήψη του ήχου."
+
+
+# sparky-tube.sh:1147
+msgid "Please wait while the video is downloading."
+msgstr "Περιμένετε όσο γίνεται λήψη του βίντεο."
+
+
+# sparky-tube.sh:1148 e 1150
+msgid "Downloading video..."
+msgstr "Λήψη βίντεο..."
+
+
+# sparky-tube.sh:
+msgid "Saving to"
+msgstr "Αποθήκευση σε"
+
+
+# sparky-tube.sh:1183
+msgid "Failed to download video. Please try again later."
+msgstr "Αποτυχία λήψης βίντεο. Δοκιμάστε ξανά αργότερα."
+
+
+# sparky-tube.sh:1341
+msgid "Failed to download audio. Please try again later."
+msgstr "Αποτυχία λήψης ήχου. Δοκιμάστε ξανά αργότερα."
+
+
+# sparky-tube.sh:1272
+
+# Em \"Reprodutor de mídia\" foi usado: \"$PLAYLST\"
+
+msgid "In \"Media Player\" was used: \"$PLAYLIST\""
+msgstr "Στο \"Media Player\" χρησιμοποιήθηκε: \"$PLAYLIST\""
+
+
+# sparky-tube.sh:332
+msgid "The languages ​​currently supported by the program are"
+msgstr "Οι γλώσσες που υποστηρίζονται αυτήν τη στιγμή από το πρόγραμμα είναι"
+
+
+# sparky-tube.sh:384
+msgid "find program is not installed."
+msgstr "Το πρόγραμμα find δεν είναι εγκατεστημένο."
+
+
+# sparky-tube.sh:947
+msgid "Error: File name not found!"
+msgstr "Σφάλμα: Το όνομα αρχείου δεν βρέθηκε!"
+
+
+# sparky-tube.sh:965
+msgid "Final file name"
+msgstr "Τελικό όνομα αρχείου"
+
+
+
+
+# sparky-tube.sh:
+# msgid ""
+# msgstr ""
+
+
+# sparky-tube.sh:
+# msgid ""
+# msgstr ""
+
+
+# sparky-tube.sh:
+# msgid ""
+# msgstr ""
+
+
+
+
+# Tradução de uma mensagem com plural
+# msgid "There is one file to process"
+# msgid_plural "There are %d files to process"
+# msgstr[0] "Há um arquivo para processar"
+# msgstr[1] "Há %d arquivos para processar"
+
+
+
+# Mensagem com data (formatação específica para a língua portuguesa)
+# msgid "Today's date is: %s"
+# msgstr "A data de hoje é: %s"
+

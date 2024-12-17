@@ -1,0 +1,481 @@
+# Este é um arquivo de tradução para o idioma Polonês.
+#
+# Tradutor: Fernando Souza <>
+# Data de criação: 10-12-2024
+#
+# Para mais informações sobre como usar este arquivo, consulte a documentação do Gettext.
+# 
+# 
+# Explicação do Arquivo .po
+# 
+#     Cabeçalho:
+# 
+#         O cabeçalho fornece informações sobre o arquivo, como o idioma da tradução (Language: pt_BR), a codificação do arquivo (charset=UTF-8), e o tipo de transferência de conteúdo.
+#         Comentários são precedidos por #, e são usados para fornecer informações sobre o arquivo ou para orientar o tradutor.
+# 
+#     msgid e msgstr:
+# 
+#         msgid: Representa a string original que será traduzida.
+#         msgstr: Representa a tradução da string para o idioma de destino (neste caso, o português).
+
+
+# msgfmt --check --verbose sparky-tube.po
+
+# $ msgfmt --check --verbose sparky-tube.po
+# 39 mensagens traduzidas.
+
+
+# msgfmt -o  sparky-tube.mo sparky-tube.po
+
+
+# Copyright (C) 2024 Free Software Foundation, Inc.
+# Autor: Fernando Souza <>
+# Data de criação: 2024-12-10
+# Traduzido por: Sua Equipe de Tradução
+# Última revisão por: Fernando Souza <>
+# Linguagem: pl
+# Equipe de tradução: Equipe de Tradução de 
+# Versão do projeto: 1.0
+# Versão do pacote: 1.0
+# Data da revisão PO: 2024-12-10
+# MIME-Version: 1.0
+# Charset: UTF-8
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Sparky Tube 1.0\n"
+"PO-Revision-Date: 2024-12-10 12:00+0000\n"
+"Last-Translator: Fernando Souza <>\n"
+"Language-Team: Equipe de Tradução de \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pl\n"
+
+
+
+
+
+# Tradução da string "" sparky-tube.sh:716
+msgid "Copy and paste the video address below:"
+msgstr "Skopiuj i wklej poniższy adres wideo:"
+
+# Tradução da string "" sparky-tube.sh:1071  - Não funcionou
+msgid "\nThe URL you entered is invalid!\nPlease check and try again!\n\nExiting..."
+msgstr "\nWprowadzony adres URL jest nieprawidłowy!\nSprawdź i spróbuj ponownie!\n\nWychodzenie..."
+
+
+# sparky-tube.sh:1099 e 1147
+msgid "Downloading and Converting to:" 
+msgstr "Pobieranie i konwertowanie do:" 
+
+
+# sparky-tube.sh:1291
+msgid "Your audio has been successfully saved to" 
+msgstr "Twój dźwięk został pomyślnie zapisany do" 
+
+# sparky-tube.sh:1295
+msgid "Your video has been successfully saved to"
+msgstr "Twój film został pomyślnie zapisany do"
+
+
+# sparky-tube.sh:
+msgid "OK"
+msgstr "OK"
+
+# Mensagem para uma opção de menu
+
+# sparky-tube.sh:725
+msgid "To go out" 
+msgstr "Wyjść" 
+
+
+# sparky-tube.sh:719 e 899
+msgid "Choose an audio or video format" 
+msgstr "Wybierz format audio lub wideo" 
+
+
+# sparky-tube.sh:919 - Não funcionou
+msgid "You have not entered any URL!   Exiting..." 
+msgstr "Nie wprowadzono żadnego adresu URL!   Wychodzenie..." 
+
+
+# sparky-tube.sh:1100 e 1148
+msgid "Please wait until complite..." 
+msgstr "Proszę czekać na zakończenie..." 
+
+# sparky-tube.sh:720 - Não funcionou
+msgid "Play after downloading" 
+msgstr "Odtwórz po pobraniu" 
+
+# sparky-tube.sh:1009 e 1183
+msgid "ERROR" 
+msgstr "BŁĄD" 
+
+# sparky-tube.sh:721 , 901 e 954
+msgid "Download Playlist" 
+msgstr "Pobierz listę odtwarzania" 
+
+# sparky-tube.sh:287, 1112, 1217, 1237
+msgid "Notice" 
+msgstr "Powiadomienie" 
+
+
+# sparky-tube.sh:575 e 726
+msgid "Help" 
+msgstr "Pomoc" 
+
+# sparky-tube.sh:
+msgid "Media Player" 
+msgstr "Odtwarzacz multimedialny" 
+
+
+# sparky-tube.sh:
+msgid "Unidentified language... returned" 
+msgstr "Zwrócono niezidentyfikowany język..." 
+
+# sparky-tube.sh:
+msgid "yt-dlp program is not installed." 
+msgstr "Program yt-dlp nie jest zainstalowany." 
+
+
+# sparky-tube.sh:
+msgid "ffplay program is not installed." 
+msgstr "Program ffplay nie jest zainstalowany." 
+
+# sparky-tube.sh:
+msgid "Curl program is not installed." 
+msgstr "Program Curl nie jest zainstalowany." 
+
+
+# sparky-tube.sh:
+msgid "Notify-send program is not installed." 
+msgstr "Program Notify-send nie jest zainstalowany." 
+
+# sparky-tube.sh:
+msgid "Sed program is not installed." 
+msgstr "Program Sed nie jest zainstalowany." 
+
+
+# sparky-tube.sh:
+msgid "Ping program is not installed." 
+msgstr "Program Ping nie jest zainstalowany." 
+
+# sparky-tube.sh:
+msgid "You-get program is not installed." 
+msgstr "Program You-get nie jest zainstalowany." 
+
+
+# sparky-tube.sh: - Não funcionou
+msgid "No Internet Access" 
+msgstr "Brak dostępu do Internetu" 
+
+# sparky-tube.sh:
+msgid "You are not connected to the Internet!" 
+msgstr "Nie masz połączenia z Internetem!" 
+
+
+# sparky-tube.sh:727
+msgid "Infor" 
+msgstr "Infor" 
+
+# sparky-tube.sh:244 e 806
+msgid "System" 
+msgstr "System" 
+
+
+# sparky-tube.sh:246
+msgid "Kernel version" 
+msgstr "Wersja jądra" 
+
+# sparky-tube.sh:
+msgid "Processor Architecture" 
+msgstr "Architektura procesora" 
+
+
+# sparky-tube.sh:
+msgid "YT-DLP Version" 
+msgstr "Wersja YT-DLP" 
+
+# sparky-tube.sh:
+msgid "No player configured." 
+msgstr "Żaden odtwarzacz nie został skonfigurowany." 
+
+
+# sparky-tube.sh:110
+msgid "Language" 
+msgstr "Język" 
+
+
+
+# sparky-tube.sh:630
+
+# Função ajuda
+
+# Traduzir o texto longo com gettext por partes (essa parte esta funcionando)
+
+
+msgid "Sparky Tube downloads a video file from a website and converts it into an audio or video output file."
+msgstr "Sparky Tube pobiera plik wideo ze strony internetowej i konwertuje go na plik wyjściowy audio lub wideo."
+
+msgid "This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License." 
+msgstr "Ten program jest wolnym oprogramowaniem: możesz go rozpowszechniać i/lub modyfikować na warunkach Powszechnej Licencji Publicznej GNU." 
+
+msgid "as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version." 
+msgstr "opublikowanej przez Free Software Foundation, w wersji 3 Licencji lub (według własnego wyboru) w dowolnej późniejszej wersji." 
+
+msgid "This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty"
+msgstr "Ten program jest rozpowszechniany z nadzieją, że będzie użyteczny, ale BEZ ŻADNEJ GWARANCJI; nawet bez domniemanej gwarancji"
+
+msgid "of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details."
+msgstr "PRZYDATNOŚCI HANDLOWEJ lub PRZYDATNOŚCI DO OKREŚLONEGO CELU. Więcej szczegółów można znaleźć w Powszechnej Licencji Publicznej GNU."
+
+
+msgid "You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/."
+msgstr "Powinieneś otrzymać kopię Powszechnej Licencji Publicznej GNU wraz z tym programem. Jeśli nie, zobacz https://www.gnu.org/licenses/."
+
+
+
+# O Sparky Tube baixa um arquivo de vídeo de um site e o converte em um arquivo de saída de áudio ou vídeo.
+
+# Este programa é software livre: você pode redistribuí-lo e/ou modificá-lo sob os termos da 
+# Licença Pública Geral GNU conforme publicada pela Free Software Foundation, seja na versão 3 
+# da Licença ou (a seu critério) qualquer versão posterior.
+
+# Este programa é distribuído na esperança de que seja útil, mas SEM QUAISQUER GARANTIAS; sem 
+# mesmo a garantia implícita de COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM FIM ESPECÍFICO. Veja a 
+# Licença Pública Geral GNU para mais detalhes.
+
+# Você deve ter recebido uma cópia da Licença Pública Geral GNU junto com este programa. Se 
+# não, veja https://www.gnu.org/licenses/.
+
+
+
+
+# sparky-tube.sh:1263
+msgid "Playing Video/Audio file..." 
+msgstr "Odtwarzanie pliku wideo/audio..." 
+
+
+# sparky-tube.sh:1070
+msgid "Downloading audio..." 
+msgstr "Pobieranie audio..." 
+
+
+
+# sparky-tube.sh:211
+msgid "Logo not found at %s. Check path." 
+msgstr "Nie znaleziono logo w %s. Sprawdź ścieżkę." 
+
+
+# sparky-tube.sh: - Não funcionou
+msgid "Folder %s not found. Check the path." 
+msgstr "Nie znaleziono folderu %s. Sprawdź ścieżkę." 
+
+
+
+# Valor nulo para reproduzir arquivo de Vídeo/Aúdio
+
+# sparky-tube.sh:
+msgid "None" 
+msgstr "Brak" 
+
+# sparky-tube.sh:
+msgid "Yes"
+msgstr "Tak"
+
+
+# sparky-tube.sh:
+msgid "No"
+msgstr "Nie"
+
+
+# sparky-tube.sh:346
+msgid "No yt-dlp processes found."
+msgstr "Nie znaleziono procesów yt-dlp."
+
+# sparky-tube.sh:356
+msgid "No you-get processes found."
+msgstr "Nie znaleziono procesów you-get."
+
+
+# sparky-tube.sh:483
+msgid "Checking if user is connected to the internet..."
+msgstr "Sprawdzanie, czy użytkownik jest połączony z internetem..."
+
+
+# sparky-tube.sh:491
+msgid "Connected to the Internet"
+msgstr "Połączono z internetem"
+
+
+# sparky-tube.sh:
+msgid "\nThe yt-dlp package is not installed... \n\n Do you want to install now?"
+msgstr "\nPakiet yt-dlp nie jest zainstalowany... \n\n Czy chcesz zainstalować teraz?"
+
+
+# sparky-tube.sh:
+msgid "\nCopy and paste the video address below:\n"
+msgstr "\nSkopiuj i wklej poniższy adres wideo:\n"
+
+
+# sparky-tube.sh:
+msgid "\nChoose the location you want to save:"
+msgstr "\nWybierz lokalizację, w której chcesz zapisać:"
+
+
+
+# sparky-tube.sh:
+msgid "\nDo you want to play the video?"
+msgstr "\nCzy chcesz odtworzyć wideo?"
+
+
+# sparky-tube.sh:
+msgid "\nSelect the video:"
+msgstr "\nWybierz wideo:"
+
+
+
+# sparky-tube.sh:
+msgid "\nDo you want to play the audio?"
+msgstr "\nCzy chcesz odtworzyć audio?"
+
+
+# sparky-tube.sh:
+msgid "\nSelect the audio:"
+msgstr "\nWybierz audio:"
+
+
+# sparky-tube.sh:
+msgid "Videos from the lists are not available."
+msgstr "Filmy z list są niedostępne."
+
+
+
+# sparky-tube.sh:
+msgid "We are working on this."
+msgstr "Pracujemy nad tym."
+
+
+
+# sparky-tube.sh:1027
+msgid "Unknown error."
+msgstr "Nieznany błąd."
+
+
+# sparky-tube.sh:
+msgid "File name"
+msgstr "Nazwa pliku"
+
+
+# sparky-tube.sh:
+msgid "Downloading from playlist to"
+msgstr "Pobieranie z listy odtwarzania do"
+
+
+# sparky-tube.sh:149
+msgid "Using language"
+msgstr "Używanie języka"
+
+
+
+# sparky-tube.sh:1044
+
+msgid "Audio quality is usually determined by the bit rate (the higher the bit rate, the better the quality)."
+msgstr "Jakość dźwięku jest zazwyczaj określana przez szybkość transmisji danych (im wyższa szybkość transmisji danych, tym lepsza jakość)."
+
+msgid "For video quality, the main criteria are resolution and codec."
+msgstr "Głównymi kryteriami jakości wideo są rozdzielczość i kodek."
+
+
+# sparky-tube.sh:1083
+msgid "Please wait while the audio is downloading."
+msgstr "Proszę czekać, podczas gdy dźwięk jest pobierany."
+
+
+# sparky-tube.sh:1147
+msgid "Please wait while the video is downloading."
+msgstr "Proszę czekać, podczas gdy wideo jest pobierane."
+
+
+# sparky-tube.sh:1148 e 1150
+msgid "Downloading video..."
+msgstr "Pobieranie wideo..."
+
+
+
+# sparky-tube.sh:
+msgid "Saving to"
+msgstr "Zapisywanie do"
+
+
+# sparky-tube.sh:1183
+msgid "Failed to download video. Please try again later."
+msgstr "Nie udało się pobrać wideo. Spróbuj ponownie później."
+
+
+# sparky-tube.sh:1341
+msgid "Failed to download audio. Please try again later."
+msgstr "Nie udało się pobrać dźwięku. Spróbuj ponownie później."
+
+
+
+# sparky-tube.sh:1272
+
+# Em \"Reprodutor de mídia\" foi usado: \"$PLAYLST\"
+
+msgid "In \"Media Player\" was used: \"$PLAYLIST\""
+msgstr "W \"Media Player\" użyto: \"$PLAYLIST\""
+
+
+# sparky-tube.sh:332
+msgid "The languages ​​currently supported by the program are"
+msgstr "Języki obecnie obsługiwane przez program to"
+
+
+# sparky-tube.sh:384
+msgid "find program is not installed."
+msgstr "find program nie jest zainstalowany."
+
+
+# sparky-tube.sh:947
+msgid "Error: File name not found!"
+msgstr "Błąd: Nazwa pliku nie została znaleziona!"
+
+
+# sparky-tube.sh:965
+msgid "Final file name"
+msgstr "Ostateczna nazwa pliku"
+
+
+
+
+# sparky-tube.sh:
+# msgid ""
+# msgstr ""
+
+
+# sparky-tube.sh:
+# msgid ""
+# msgstr ""
+
+
+# sparky-tube.sh:
+# msgid ""
+# msgstr ""
+
+
+
+
+# Tradução de uma mensagem com plural
+# msgid "There is one file to process"
+# msgid_plural "There are %d files to process"
+# msgstr[0] "Há um arquivo para processar"
+# msgstr[1] "Há %d arquivos para processar"
+
+
+
+# Mensagem com data (formatação específica para a língua portuguesa)
+# msgid "Today's date is: %s"
+# msgstr "A data de hoje é: %s"
+
