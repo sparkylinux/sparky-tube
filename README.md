@@ -8,10 +8,11 @@ Este programa é distribuído na esperança de que seja útil, mas SEM NENHUMA G
 
 Você deve ter recebido uma cópia da GNU General Public License junto com este programa. Se não, veja https://www.gnu.org/licenses/.
 
+<br> <br> 
 
 **Obs:** A pasta usr é usada para realizar uma **instalação universal** nas diversas distribuições Linux.
 
-<br> <br> <br> <br>
+<br> <br>
 
 Instalação com usuário Root:
 
