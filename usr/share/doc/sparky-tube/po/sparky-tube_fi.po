@@ -71,12 +71,12 @@ msgstr "Lataaminen ja muuntaminen muotoon:"
 
 
 # sparky-tube.sh:1291
-msgid "\nYour audio has been successfully saved to" 
-msgstr "\nÄäni on tallennettu onnistuneesti kohteeseen" 
+msgid "Your audio has been successfully saved to" 
+msgstr "Ääni on tallennettu onnistuneesti kohteeseen" 
 
 # sparky-tube.sh:1295
-msgid "\nYour video has been successfully saved to"
-msgstr "\nVideosi on tallennettu onnistuneesti kohteeseen"
+msgid "Your video has been successfully saved to"
+msgstr "Videosi on tallennettu onnistuneesti kohteeseen"
 
 
 # sparky-tube.sh:
@@ -381,13 +381,11 @@ msgstr "Kielen käyttö"
 
 # sparky-tube.sh:1044
 
-msgid "\n\nAudio quality is usually determined by the bit rate (the higher the bit rate, the better the quality)."
-"\n"
-"For video quality, the main criteria are resolution and codec.\n\n"
+msgid "Audio quality is usually determined by the bit rate (the higher the bit rate, the better the quality)."
+msgstr "Äänen laatu määräytyy yleensä bittinopeuden mukaan (mitä suurempi bittinopeus, sitä parempi laatu)."
 
-msgstr "\n\nÄänen laatu määräytyy yleensä bittinopeuden mukaan (mitä suurempi bittinopeus, sitä parempi laatu)."
-"\n"
-"Videon laadun pääkriteerit ovat resoluutio ja koodekki.\n\n"
+msgid "For video quality, the main criteria are resolution and codec."
+msgstr "Videon laadun pääkriteerit ovat resoluutio ja koodekki."
 
 
 

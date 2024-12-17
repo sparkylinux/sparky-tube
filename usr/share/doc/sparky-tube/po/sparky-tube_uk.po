@@ -71,12 +71,12 @@ msgstr "Завантаження та перетворення на:"
 
 
 # sparky-tube.sh:1291
-msgid "\nYour audio has been successfully saved to" 
-msgstr "\nВаше аудіофайл успішно збережено в" 
+msgid "Your audio has been successfully saved to" 
+msgstr "Ваше аудіофайл успішно збережено в" 
 
 # sparky-tube.sh:1295
-msgid "\nYour video has been successfully saved to"
-msgstr "\nВаше відео успішно збережено в"
+msgid "Your video has been successfully saved to"
+msgstr "Ваше відео успішно збережено в"
 
 
 # sparky-tube.sh:
@@ -381,15 +381,11 @@ msgstr "Використання мови"
 
 # sparky-tube.sh:1044
 
-msgid "\n\nAudio quality is usually determined by the bit rate (the higher the bit rate, the better the quality)."
-"\n"
-"For video quality, the main criteria are resolution and codec.\n\n"
+msgid "Audio quality is usually determined by the bit rate (the higher the bit rate, the better the quality)."
+msgstr "Якість аудіо зазвичай визначається бітрейтом (що вищий бітрейт, то краща якість)."
 
-
-msgstr "\n\nЯкість аудіо зазвичай визначається бітрейтом (що вищий бітрейт, то краща якість)."
-"\n"
-"Для якості відео основними критеріями є роздільна здатність і кодек.\n\n"
-
+msgid "For video quality, the main criteria are resolution and codec."
+msgstr "Для якості відео основними критеріями є роздільна здатність і кодек."
 
 
 # sparky-tube.sh:1083

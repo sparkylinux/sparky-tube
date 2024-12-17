@@ -31,7 +31,13 @@
 
    \nYou have not entered any URL! \n\nExiting...    => line 1086 - /usr/local/bin/sparky-tube.sh (Gettext is not recognizing the use of \n (line break) within the translation string.)
 
-   Help Function => ajuda()   line 759 - /usr/local/bin/sparky-tube.sh (Translate long text with gettext only in parts)
+   Help Function => ajuda()    => line 759 - /usr/local/bin/sparky-tube.sh (Translate long text with gettext only in parts)
+
+
+   The PLAYER is not opening a file with a name that has accents, white space and special characters => line 1457 - /usr/local/bin/sparky-tube.sh
+
+   "$PLAYLST" "${FILE%.*}.$PLAYFORMAT" 2>/dev/null &
+
 
 
   .po file in: /usr/share/doc/sparky-tube/po/

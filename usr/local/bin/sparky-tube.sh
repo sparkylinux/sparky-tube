@@ -905,7 +905,27 @@ PLAYERSLIST=$(echo "$PLAYERSLIST" | tr ',' '\n' | sort | tr '\n' ',' | sed 's/,$
 
 # ----------------------------------------------------------------------------------------
 
+
+#### Essa parte não recebeu tradução para outros idiomas ####
+
+
 # Função para obter o nome do arquivo
+
+
+# O problema pode ocorrer se a variável FILE contiver caracteres especiais, como espaços, 
+# acentos ou outros símbolos não alfanuméricos, que precisam ser tratados adequadamente.
+
+
+# _getFileName() {
+
+    # Usando a opção '--no-playlist' e '--output' do yt-dlp para pegar o nome do arquivo sem a playlist
+
+#     FILE=$(yt-dlp --no-playlist -o '%(title)s.%(ext)s' -es "$URL" 2>/dev/null)
+
+    # Substituir os caracteres '&' e '?' com segurança
+#     PLAYLISTITLE=$(echo "$FILE" | sed 's/&/\&amp;/g; s/?//g')
+# }
+
 
 
 _getFileName() {
@@ -914,9 +934,32 @@ _getFileName() {
 
     FILE=$(yt-dlp --no-playlist -o '%(title)s.%(ext)s' -es "$URL" 2>/dev/null)
 
-    # Substituir os caracteres '&' e '?' com segurança
+
+    # Verificar se o yt-dlp retornou um nome de arquivo válido
+
+    if [ -z "$FILE" ]; then
+
+        echo "Erro: Nome do arquivo não encontrado!"
+
+        return 1
+
+    fi
+
+    # Substituir os caracteres '&' por '&amp;' e remover o caractere '?'
+
     PLAYLISTITLE=$(echo "$FILE" | sed 's/&/\&amp;/g; s/?//g')
+
+
+    # Garantir que o nome do arquivo gerado seja seguro para uso
+
+    PLAYLISTITLE=$(echo "$PLAYLISTITLE" | sed 's/[^a-zA-Z0-9._-]/_/g')
+
+
+    # Exibir o nome final do arquivo (opcional para debug)
+
+    echo "Nome final do arquivo: $PLAYLISTITLE"
 }
+
 
 # ----------------------------------------------------------------------------------------
 
@@ -1065,13 +1108,11 @@ fi
 # Mostra as informações escolhecidas pelo usuário no terminal
 
 echo "
-# 
 # URL:                                                                 $URL
 # $(gettext 'Choose an audio or video format'):                        $PLAYFORMAT                                      
 # $(gettext 'Play after downloading'):                                 $PLAYER_STATUS 
 # $(gettext 'Download Playlist'):                                      $PLAY_STATUS                 
 # $(gettext 'Media Player'):                                           $PLAYLST 
-# 
 "
 
 # ----------------------------------------------------------------------------------------
@@ -1201,9 +1242,14 @@ fi
 
 # A melhor qualidade de áudio seria a opção 258 m4a com uma taxa de bits de 387k.
 
-echo "$(gettext '\n\nAudio quality is usually determined by the bit rate (the higher the bit rate, the better the quality).
 
-For video quality, the main criteria are resolution and codec.\n\n')"
+
+message_text=$(gettext "Audio quality is usually determined by the bit rate (the higher the bit rate, the better the quality).")
+
+message_text+="\n\n$(gettext "For video quality, the main criteria are resolution and codec.")"
+
+
+echo -e "\n\n$message_text\n\n"
 
 
 yt-dlp -F "$URL" | grep -E 'video|audio'
@@ -1446,6 +1492,8 @@ else
 
      # O PLAYER não esta abrindo arquivo com nome que tem acentos, espaço em branco e caracteres especiais Ex: "Vaso sanitário solto, o que fazer？.mkv"
 
+     # The PLAYER is not opening a file with a name that has accents, white space and special characters
+
      # https://www.youtube.com/watch?v=boVy0oEqX3o
 
 
@@ -1477,11 +1525,11 @@ if [ "$PLAY" = "FALSE" ]; then
 
 	if [ "$AVFORMAT" = "audio" ]; then
 
-		yad --center --image-on-top --title="$TITLETEXT" --window-icon="$logo" --image="$logo"  --info --text="${FILE%.*}.$PLAYFORMAT\n$(gettext '\nYour audio has been successfully saved to'): $MUSICSAVEPATH" --buttons-layout=center --button=$(gettext 'OK'):0 --width="$SIZE" 2>/dev/null
+		yad --center --image-on-top --title="$TITLETEXT" --window-icon="$logo" --image="$logo"  --info --text="${FILE%.*}.$PLAYFORMAT\n$(gettext 'Your audio has been successfully saved to'): $MUSICSAVEPATH" --buttons-layout=center --button=$(gettext 'OK'):0 --width="$SIZE" 2>/dev/null
 
 	else
 
-		yad --center --image-on-top --title="$TITLETEXT" --window-icon="$logo" --image="$logo"  --info --text="${FILE%.*}.$PLAYFORMAT\n$(gettext '\nYour video has been successfully saved to'): $VIDEOSAVEPATH"  --buttons-layout=center --button=$(gettext 'OK'):0 --width="$SIZE" 2>/dev/null
+		yad --center --image-on-top --title="$TITLETEXT" --window-icon="$logo" --image="$logo"  --info --text="${FILE%.*}.$PLAYFORMAT\n$(gettext 'Your video has been successfully saved to'): $VIDEOSAVEPATH"  --buttons-layout=center --button=$(gettext 'OK'):0 --width="$SIZE" 2>/dev/null
 
 	fi
 

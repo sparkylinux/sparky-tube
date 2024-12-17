@@ -71,12 +71,12 @@ msgstr "Téléchargement et conversion en:"
 
 
 # sparky-tube.sh:1291
-msgid "\nYour audio has been successfully saved to" 
-msgstr "\nVotre audio a été enregistré avec succès dans" 
+msgid "Your audio has been successfully saved to" 
+msgstr "Votre audio a été enregistré avec succès dans" 
 
 # sparky-tube.sh:1295
-msgid "\nYour video has been successfully saved to"
-msgstr "\nVotre vidéo a été enregistrée avec succès dans"
+msgid "Your video has been successfully saved to"
+msgstr "Votre vidéo a été enregistrée avec succès dans"
 
 
 # sparky-tube.sh:
@@ -383,13 +383,12 @@ msgstr "Utilisation de la langue"
 
 # sparky-tube.sh:1044
 
-msgid "\n\nAudio quality is usually determined by the bit rate (the higher the bit rate, the better the quality)."
-"\n"
-"For video quality, the main criteria are resolution and codec.\n\n"
 
-msgstr "\n\nLa qualité audio est généralement déterminée par le débit binaire (plus le débit binaire est élevé, meilleure est la qualité)."
-"\n"
-"Pour la qualité vidéo, les principaux critères sont la résolution et le codec.\n\n"
+msgid "Audio quality is usually determined by the bit rate (the higher the bit rate, the better the quality)."
+msgstr "La qualité audio est généralement déterminée par le débit binaire (plus le débit binaire est élevé, meilleure est la qualité)."
+
+msgid "For video quality, the main criteria are resolution and codec."
+msgstr "Pour la qualité vidéo, les principaux critères sont la résolution et le codec."
 
 
 

@@ -71,12 +71,12 @@ msgstr "Λήψη και μετατροπή σε:"
 
 
 # sparky-tube.sh:1291
-msgid "\nYour audio has been successfully saved to" 
-msgstr "\nΟ ήχος σας αποθηκεύτηκε με επιτυχία στο" 
+msgid "Your audio has been successfully saved to" 
+msgstr "Ο ήχος σας αποθηκεύτηκε με επιτυχία στο" 
 
 # sparky-tube.sh:1295
-msgid "\nYour video has been successfully saved to"
-msgstr "\nΤο βίντεό σας αποθηκεύτηκε με επιτυχία στο"
+msgid "Your video has been successfully saved to"
+msgstr "Το βίντεό σας αποθηκεύτηκε με επιτυχία στο"
 
 
 # sparky-tube.sh:
@@ -381,15 +381,11 @@ msgstr "Χρήση γλώσσας"
 
 # sparky-tube.sh:1044
 
-msgid "\n\nAudio quality is usually determined by the bit rate (the higher the bit rate, the better the quality)."
-"\n"
-"For video quality, the main criteria are resolution and codec.\n\n"
+msgid "Audio quality is usually determined by the bit rate (the higher the bit rate, the better the quality)."
+msgstr "Η ποιότητα του ήχου καθορίζεται συνήθως από τον ρυθμό μετάδοσης bit (όσο υψηλότερος είναι ο ρυθμός μετάδοσης bit, τόσο καλύτερη είναι η ποιότητα)."
 
-
-msgstr "\n\nΗ ποιότητα του ήχου καθορίζεται συνήθως από τον ρυθμό μετάδοσης bit (όσο υψηλότερος είναι ο ρυθμός μετάδοσης bit, τόσο καλύτερη είναι η ποιότητα)."
-"\n"
-"Για την ποιότητα του βίντεο, τα κύρια κριτήρια είναι η ανάλυση και ο κωδικοποιητής.\n\n"
-
+msgid "For video quality, the main criteria are resolution and codec."
+msgstr "Για την ποιότητα του βίντεο, τα κύρια κριτήρια είναι η ανάλυση και ο κωδικοποιητής."
 
 
 # sparky-tube.sh:1083

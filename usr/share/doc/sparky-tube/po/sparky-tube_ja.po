@@ -71,12 +71,12 @@ msgstr "ダウンロードして変換しています:"
 
 
 # sparky-tube.sh:1291
-msgid "\nYour audio has been successfully saved to" 
-msgstr "\nオーディオは に保存されました" 
+msgid "Your audio has been successfully saved to" 
+msgstr "オーディオは に保存されました" 
 
 # sparky-tube.sh:1295
-msgid "\nYour video has been successfully saved to"
-msgstr "\nビデオは に保存されました"
+msgid "Your video has been successfully saved to"
+msgstr "ビデオは に保存されました"
 
 
 # sparky-tube.sh:
@@ -383,14 +383,11 @@ msgstr "使用言語"
 
 # sparky-tube.sh:1044
 
-msgid "\n\nAudio quality is usually determined by the bit rate (the higher the bit rate, the better the quality)."
-"\n"
-"For video quality, the main criteria are resolution and codec.\n\n"
+msgid "Audio quality is usually determined by the bit rate (the higher the bit rate, the better the quality)."
+msgstr "オーディオ品質は通常、ビット レートによって決まります (ビット レートが高いほど、品質は良くなります)。"
 
-msgstr "\n\nオーディオ品質は通常、ビット レートによって決まります (ビット レートが高いほど、品質は良くなります)。"
-"\n"
-"ビデオ品質の主な基準は解像度とコーデックです。\n\n"
-
+msgid "For video quality, the main criteria are resolution and codec."
+msgstr "ビデオ品質の主な基準は解像度とコーデックです。"
 
 
 # sparky-tube.sh:1083

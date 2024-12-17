@@ -71,11 +71,11 @@ msgstr ""
 
 
 # sparky-tube.sh:1291
-msgid "\nYour audio has been successfully saved to" 
+msgid "Your audio has been successfully saved to" 
 msgstr "" 
 
 # sparky-tube.sh:1295
-msgid "\nYour video has been successfully saved to"
+msgid "Your video has been successfully saved to"
 msgstr ""
 
 
@@ -380,14 +380,12 @@ msgstr ""
 
 # sparky-tube.sh:1044
 
-msgid "\n\nAudio quality is usually determined by the bit rate (the higher the bit rate, the better the quality)."
-"\n"
-"For video quality, the main criteria are resolution and codec.\n\n"
-
-
+msgid "Audio quality is usually determined by the bit rate (the higher the bit rate, the better the quality)."
 msgstr ""
-"\n"
-""
+
+msgid "For video quality, the main criteria are resolution and codec."
+msgstr ""
+
 
 
 

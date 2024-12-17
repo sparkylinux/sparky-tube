@@ -159,6 +159,7 @@ echo "1. Instalar o programa [root]"
 echo "2. Remover o programa [root]"
 echo "3. Ajuda"
 echo "4. Corrigir tradução [root]"
+echo "5. Gerar os arquivos .mo com base nos arquivos .po [root]"
 echo "0. Sair"
 echo ""
 read -p "Digite o número da opção desejada: " option
@@ -489,6 +490,56 @@ pt_BR.utf8
         exit 3
 
         ;;
+
+    5)  
+        clear
+
+        verifica_root
+
+        echo "
+
+        Gerando os arquivos .mo com base nos arquivos .po...
+"
+
+#         msgfmt --check --verbose  /usr/share/doc/sparky-tube/po/sparky-tube_pt_BR.po  -o /usr/share/locale/pt_BR/LC_MESSAGES/sparky-tube.mo
+#         msgfmt --check --verbose  /usr/share/doc/sparky-tube/po/sparky-tube_de.po     -o /usr/share/locale/de/LC_MESSAGES/sparky-tube.mo
+#         msgfmt --check --verbose  /usr/share/doc/sparky-tube/po/sparky-tube_el.po     -o /usr/share/locale/el/LC_MESSAGES/sparky-tube.mo
+#         msgfmt --check --verbose  /usr/share/doc/sparky-tube/po/sparky-tube_en.po     -o /usr/share/locale/en/LC_MESSAGES/sparky-tube.mo
+#         msgfmt --check --verbose  /usr/share/doc/sparky-tube/po/sparky-tube_es_ES.po  -o /usr/share/locale/es_ES/LC_MESSAGES/sparky-tube.mo
+#         msgfmt --check --verbose  /usr/share/doc/sparky-tube/po/sparky-tube_fi.po     -o /usr/share/locale/fi/LC_MESSAGES/sparky-tube.mo
+#         msgfmt --check --verbose  /usr/share/doc/sparky-tube/po/sparky-tube_fr.po     -o /usr/share/locale/fr/LC_MESSAGES/sparky-tube.mo
+#         msgfmt --check --verbose  /usr/share/doc/sparky-tube/po/sparky-tube_hu.po     -o /usr/share/locale/hu/LC_MESSAGES/sparky-tube.mo
+#         msgfmt --check --verbose  /usr/share/doc/sparky-tube/po/sparky-tube_it.po     -o /usr/share/locale/it/LC_MESSAGES/sparky-tube.mo
+#         msgfmt --check --verbose  /usr/share/doc/sparky-tube/po/sparky-tube_ja.po     -o /usr/share/locale/ja/LC_MESSAGES/sparky-tube.mo
+#         msgfmt --check --verbose  /usr/share/doc/sparky-tube/po/sparky-tube_pl.po     -o /usr/share/locale/pl/LC_MESSAGES/sparky-tube.mo
+#         msgfmt --check --verbose  /usr/share/doc/sparky-tube/po/sparky-tube_ru.po     -o /usr/share/locale/ru/LC_MESSAGES/sparky-tube.mo
+#         msgfmt --check --verbose  /usr/share/doc/sparky-tube/po/sparky-tube_uk.po     -o /usr/share/locale/uk/LC_MESSAGES/sparky-tube.mo
+
+
+# Pode otimizar esse código usando um loop para iterar sobre os arquivos .po de forma mais compacta e eficiente, sem precisar repetir o comando msgfmt para cada idioma.
+
+
+for lang in pt_BR de el en es_ES fi fr hu it ja pl ru uk; do
+
+        echo -e "Gerando o arquivo /usr/share/locale/${lang}/LC_MESSAGES/sparky-tube.mo \n"
+
+    if msgfmt --check --verbose /usr/share/doc/sparky-tube/po/sparky-tube_${lang}.po -o /usr/share/locale/${lang}/LC_MESSAGES/sparky-tube.mo; then
+
+        echo -e "\033[0;32mCompilação bem-sucedida para o idioma ${lang}.\n\033[0m"
+
+    else
+
+        echo -e "\033[0;31mErro ao compilar o arquivo .po para o idioma ${lang}.\n\033[0m"
+
+        echo -e "\n\n/usr/share/doc/sparky-tube/po/sparky-tube_${lang}.po"
+
+    fi
+
+done
+
+
+        ;;
+
 
     0)  
         clear
