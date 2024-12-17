@@ -1,0 +1,466 @@
+# Este é um arquivo de tradução para o idioma húngaro.
+#
+# Tradutor: Fernando Souza <>
+# Data de criação: 10-12-2024
+#
+# Para mais informações sobre como usar este arquivo, consulte a documentação do Gettext.
+# 
+# 
+# Explicação do Arquivo .po
+# 
+#     Cabeçalho:
+# 
+#         O cabeçalho fornece informações sobre o arquivo, como o idioma da tradução (Language: pt_BR), a codificação do arquivo (charset=UTF-8), e o tipo de transferência de conteúdo.
+#         Comentários são precedidos por #, e são usados para fornecer informações sobre o arquivo ou para orientar o tradutor.
+# 
+#     msgid e msgstr:
+# 
+#         msgid: Representa a string original que será traduzida.
+#         msgstr: Representa a tradução da string para o idioma de destino (neste caso, o português).
+
+
+# msgfmt --check --verbose sparky-tube.po
+
+# $ msgfmt --check --verbose sparky-tube.po
+# 39 mensagens traduzidas.
+
+
+# msgfmt -o  sparky-tube.mo sparky-tube.po
+
+
+# Copyright (C) 2024 Free Software Foundation, Inc.
+# Autor: Fernando Souza <>
+# Data de criação: 2024-12-10
+# Traduzido por: Sua Equipe de Tradução
+# Última revisão por: Fernando Souza <>
+# Linguagem: hu
+# Equipe de tradução: Equipe de Tradução de 
+# Versão do projeto: 1.0
+# Versão do pacote: 1.0
+# Data da revisão PO: 2024-12-10
+# MIME-Version: 1.0
+# Charset: UTF-8
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Sparky Tube 1.0\n"
+"PO-Revision-Date: 2024-12-10 12:00+0000\n"
+"Last-Translator: Fernando Souza <>\n"
+"Language-Team: Equipe de Tradução de \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hu\n"
+
+
+
+
+
+# Tradução da string "" sparky-tube.sh:716
+msgid "Copy and paste the video address below:"
+msgstr "Másolja ki és illessze be az alábbi videó címét:"
+
+# Tradução da string "" sparky-tube.sh:1071  - Não funcionou
+msgid "\nThe URL you entered is invalid!\nPlease check and try again!\n\nExiting..."
+msgstr "\nA megadott URL érvénytelen!\nEllenőrizze, és próbálja újra!\n\nKilépés..."
+
+
+# sparky-tube.sh:1099 e 1147
+msgid "Downloading and Converting to:" 
+msgstr "Letöltés és konvertálás ide:" 
+
+
+# sparky-tube.sh:1291
+msgid "\nYour audio has been successfully saved to" 
+msgstr "\nA hangot sikeresen elmentette ide" 
+
+# sparky-tube.sh:1295
+msgid "\nYour video has been successfully saved to"
+msgstr "\nA videód sikeresen elmentve ide"
+
+
+# sparky-tube.sh:
+msgid "OK"
+msgstr "RENDBEN"
+
+# Mensagem para uma opção de menu
+
+# sparky-tube.sh:725
+msgid "To go out" 
+msgstr "Kijárat" 
+
+
+# sparky-tube.sh:719 e 899
+msgid "Choose an audio or video format" 
+msgstr "Válasszon hang- vagy videóformátumot" 
+
+
+# sparky-tube.sh:919 - Não funcionou
+msgid "You have not entered any URL!   Exiting..." 
+msgstr "Nem adott meg semmilyen URL-t!   Kilépés..." 
+
+
+# sparky-tube.sh:1100 e 1148
+msgid "Please wait until complite..." 
+msgstr "Kérjük, várjon a befejezésig..." 
+
+# sparky-tube.sh:720 - Não funcionou
+msgid "Play after downloading" 
+msgstr "Játssz a letöltés után" 
+
+# sparky-tube.sh:1009 e 1183
+msgid "ERROR" 
+msgstr "HIBA" 
+
+# sparky-tube.sh:721 , 901 e 954
+msgid "Download Playlist" 
+msgstr "Lejátszási lista letöltése" 
+
+# sparky-tube.sh:287, 1112, 1217, 1237
+msgid "Notice" 
+msgstr "Értesítés" 
+
+
+# sparky-tube.sh:575 e 726
+msgid "Help" 
+msgstr "Segítség" 
+
+# sparky-tube.sh:
+msgid "Media Player" 
+msgstr "Médialejátszó" 
+
+
+# sparky-tube.sh:
+msgid "Unidentified language... returned" 
+msgstr "Azonosítatlan nyelv... visszakerült" 
+
+# sparky-tube.sh:
+msgid "yt-dlp program is not installed." 
+msgstr "yt-dlp program nincs telepítve." 
+
+
+# sparky-tube.sh:
+msgid "ffplay program is not installed." 
+msgstr "ffplay program nincs telepítve." 
+
+# sparky-tube.sh:
+msgid "Curl program is not installed." 
+msgstr "A Curl program nincs telepítve." 
+
+
+# sparky-tube.sh:
+msgid "Notify-send program is not installed." 
+msgstr "Az Notify-Send program nincs telepítve." 
+
+# sparky-tube.sh:
+msgid "Sed program is not installed." 
+msgstr "A Sed program nincs telepítve." 
+
+
+# sparky-tube.sh:
+msgid "Ping program is not installed." 
+msgstr "A ping program nincs telepítve." 
+
+# sparky-tube.sh:
+msgid "You-get program is not installed." 
+msgstr "A You-get program nincs telepítve." 
+
+
+# sparky-tube.sh: - Não funcionou
+msgid "No Internet Access" 
+msgstr "Nincs internet-hozzáférés" 
+
+# sparky-tube.sh:
+msgid "You are not connected to the Internet!" 
+msgstr "Nem csatlakozik az internethez!" 
+
+
+# sparky-tube.sh:727
+msgid "Infor" 
+msgstr "Infor" 
+
+# sparky-tube.sh:244 e 806
+msgid "System" 
+msgstr "Rendszer" 
+
+
+# sparky-tube.sh:246
+msgid "Kernel version" 
+msgstr "Kernel verzió" 
+
+# sparky-tube.sh:
+msgid "Processor Architecture" 
+msgstr "Processzor architektúra" 
+
+
+# sparky-tube.sh:
+msgid "YT-DLP Version" 
+msgstr "YT-DLP verzió" 
+
+# sparky-tube.sh:
+msgid "No player configured." 
+msgstr "Nincs konfigurálva lejátszó." 
+
+
+# sparky-tube.sh:110
+msgid "Language" 
+msgstr "Nyelv" 
+
+
+
+# sparky-tube.sh:630
+
+# Função ajuda
+
+# Traduzir o texto longo com gettext por partes (essa parte esta funcionando)
+
+
+msgid "Sparky Tube downloads a video file from a website and converts it into an audio or video output file."
+msgstr "A Sparky Tube letölt egy videofájlt egy webhelyről, és audio- vagy videokimeneti fájllá konvertálja."
+
+msgid "This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License." 
+msgstr "Ez a program ingyenes szoftver: újraterjesztheti és/vagy módosíthatja a GNU General Public License feltételei szerint." 
+
+msgid "as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version." 
+msgstr "a Free Software Foundation által közzétett, vagy a Licenc 3. verziója, vagy (az Ön választása szerint) bármely későbbi verzió." 
+
+msgid "This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty"
+msgstr "Ezt a programot abban a reményben terjesztjük, hogy hasznos lesz, de MINDEN GARANCIA NÉLKÜL; még a beleértett garancia nélkül is"
+
+msgid "of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details."
+msgstr "ELADHATÓSÁG, vagy ALKALMASSÁG ALKALMASSÁG ALKALMASSÁGRA. További részletekért lásd a GNU General Public License-t."
+
+
+msgid "You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/."
+msgstr "Ezzel a programmal együtt meg kellett volna kapnia a GNU General Public License egy példányát. Ha nem, látogasson el a https://www.gnu.org/licenses/ oldalra."
+
+
+
+# O Sparky Tube baixa um arquivo de vídeo de um site e o converte em um arquivo de saída de áudio ou vídeo.
+
+# Este programa é software livre: você pode redistribuí-lo e/ou modificá-lo sob os termos da 
+# Licença Pública Geral GNU conforme publicada pela Free Software Foundation, seja na versão 3 
+# da Licença ou (a seu critério) qualquer versão posterior.
+
+# Este programa é distribuído na esperança de que seja útil, mas SEM QUAISQUER GARANTIAS; sem 
+# mesmo a garantia implícita de COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM FIM ESPECÍFICO. Veja a 
+# Licença Pública Geral GNU para mais detalhes.
+
+# Você deve ter recebido uma cópia da Licença Pública Geral GNU junto com este programa. Se 
+# não, veja https://www.gnu.org/licenses/.
+
+
+
+
+# sparky-tube.sh:1263
+msgid "Playing Video/Audio file..." 
+msgstr "Videó/hangfájl lejátszása..." 
+
+
+# sparky-tube.sh:1070
+msgid "Downloading audio..." 
+msgstr "Hang letöltése..." 
+
+
+
+# sparky-tube.sh:211
+msgid "Logo not found at %s. Check path." 
+msgstr "A logó nem található itt: %s. Ellenőrizze az útvonalat." 
+
+
+# sparky-tube.sh: - Não funcionou
+msgid "Folder %s not found. Check the path." 
+msgstr "A %s mappa nem található. Ellenőrizze az utat." 
+
+
+
+# Valor nulo para reproduzir arquivo de Vídeo/Aúdio
+
+# sparky-tube.sh:
+msgid "None" 
+msgstr "Egyik sem" 
+
+# sparky-tube.sh:
+msgid "Yes"
+msgstr "Igen"
+
+
+# sparky-tube.sh:
+msgid "No"
+msgstr "Nem"
+
+
+# sparky-tube.sh:346
+msgid "No yt-dlp processes found."
+msgstr "Nem találhatók yt-dlp folyamatok."
+
+# sparky-tube.sh:356
+msgid "No you-get processes found."
+msgstr "Nem található you-get folyamat."
+
+
+# sparky-tube.sh:483
+msgid "Checking if user is connected to the internet..."
+msgstr "Annak ellenőrzése, hogy a felhasználó csatlakozik-e az internethez..."
+
+
+# sparky-tube.sh:491
+msgid "Connected to the Internet"
+msgstr "Csatlakozva az internethez"
+
+
+# sparky-tube.sh:
+msgid "\nThe yt-dlp package is not installed... \n\n Do you want to install now?"
+msgstr "\nAz yt-dlp csomag nincs telepítve... \n\n Szeretné most telepíteni?"
+
+
+# sparky-tube.sh:
+msgid "\nCopy and paste the video address below:\n"
+msgstr "\nMásolja és illessze be a videó címét alább:\n"
+
+
+# sparky-tube.sh:
+msgid "\nChoose the location you want to save:"
+msgstr "\nVálassza ki a menteni kívánt helyet:"
+
+
+
+# sparky-tube.sh:
+msgid "\nDo you want to play the video?"
+msgstr "\nAkarja lejátszani a videót?"
+
+
+# sparky-tube.sh:
+msgid "\nSelect the video:"
+msgstr "\nVálassza ki a videót:"
+
+
+
+# sparky-tube.sh:
+msgid "\nDo you want to play the audio?"
+msgstr "\nSzeretné lejátszani a hangot?"
+
+
+# sparky-tube.sh:
+msgid "\nSelect the audio:"
+msgstr "\nVálassza ki a hangot:"
+
+
+# sparky-tube.sh:
+msgid "Videos from the lists are not available."
+msgstr "A listákon szereplő videók nem érhetők el."
+
+
+
+# sparky-tube.sh:
+msgid "We are working on this."
+msgstr "Ezen dolgozunk."
+
+
+
+# sparky-tube.sh:1027
+msgid "Unknown error."
+msgstr "Ismeretlen hiba."
+
+
+# sparky-tube.sh:
+msgid "File name"
+msgstr "Fájlnév"
+
+
+# sparky-tube.sh:
+msgid "Downloading from playlist to"
+msgstr "Letöltés lejátszási listáról ide"
+
+
+# sparky-tube.sh:149
+msgid "Using language"
+msgstr "A nyelv használata"
+
+
+
+# sparky-tube.sh:1044
+
+msgid "\n\nAudio quality is usually determined by the bit rate (the higher the bit rate, the better the quality)."
+"\n"
+"For video quality, the main criteria are resolution and codec.\n\n"
+
+msgstr "\n\nA hangminőséget általában a bitsebesség határozza meg (minél nagyobb a bitsebesség, annál jobb a minőség)."
+"\n"
+"A videó minőségéhez a fő kritérium a felbontás és a kodek.\n\n"
+
+
+# sparky-tube.sh:1083
+msgid "Please wait while the audio is downloading."
+msgstr "Kérjük, várjon, amíg a hang letöltődik."
+
+
+# sparky-tube.sh:1147
+msgid "Please wait while the video is downloading."
+msgstr "Kérjük, várjon, amíg a videó letöltődik."
+
+
+# sparky-tube.sh:1148 e 1150
+msgid "Downloading video..."
+msgstr "Videó letöltése..."
+
+
+
+# sparky-tube.sh:
+msgid "Saving to"
+msgstr "Mentés ide"
+
+
+# sparky-tube.sh:1183
+msgid "Failed to download video. Please try again later."
+msgstr "Nem sikerült letölteni a videót. Kérjük, próbálja újra később."
+
+
+
+# sparky-tube.sh:1272
+
+# Em \"Reprodutor de mídia\" foi usado: \"$PLAYLST\"
+
+msgid "In \"Media Player\" was used: \"$PLAYLIST\""
+msgstr "A \"Media Player\" alkalmazásban: \"$PLAYLIST\""
+
+
+# sparky-tube.sh:332
+msgid "The languages ​​currently supported by the program are"
+msgstr "A program által jelenleg támogatott nyelvek:"
+
+
+# sparky-tube.sh:384
+msgid "find program is not installed."
+msgstr "find program nincs telepítve."
+
+
+# sparky-tube.sh:
+# msgid ""
+# msgstr ""
+
+
+# sparky-tube.sh:
+# msgid ""
+# msgstr ""
+
+
+# sparky-tube.sh:
+# msgid ""
+# msgstr ""
+
+
+
+
+# Tradução de uma mensagem com plural
+# msgid "There is one file to process"
+# msgid_plural "There are %d files to process"
+# msgstr[0] "Há um arquivo para processar"
+# msgstr[1] "Há %d arquivos para processar"
+
+
+
+# Mensagem com data (formatação específica para a língua portuguesa)
+# msgid "Today's date is: %s"
+# msgstr "A data de hoje é: %s"
+
