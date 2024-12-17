@@ -9,4 +9,16 @@ Este programa é distribuído na esperança de que seja útil, mas SEM NENHUMA G
 Você deve ter recebido uma cópia da GNU General Public License junto com este programa. Se não, veja https://www.gnu.org/licenses/.
 
 
+**Obs:** A pasta usr é usada para realizar uma **instalação universal** nas diversas distribuições Linux.
+
+
+Instalação com usuário Root:
+
+chown -R root:root usr
+
+chmod -R 755 usr
+
+cp usr /
+
+
 https://sparkylinux.org/sparky-tube/
