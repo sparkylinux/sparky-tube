@@ -231,8 +231,8 @@ msgid "of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Gener
 msgstr "ELADHATÓSÁG, vagy ALKALMASSÁG ALKALMASSÁG ALKALMASSÁGRA. További részletekért lásd a GNU General Public License-t."
 
 
-msgid "You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/."
-msgstr "Ezzel a programmal együtt meg kellett volna kapnia a GNU General Public License egy példányát. Ha nem, látogasson el a https://www.gnu.org/licenses/ oldalra."
+msgid "You should have received a copy of the GNU General Public License along with this program. If not, see <a href='https://www.gnu.org/licenses/'>https://www.gnu.org/licenses/</a>."
+msgstr "Ezzel a programmal együtt meg kellett volna kapnia a GNU General Public License egy példányát. Ha nem, látogasson el a <a href='https://www.gnu.org/licenses/'>https://www.gnu.org/licenses/</a> oldalra."
 
 
 

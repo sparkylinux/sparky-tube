@@ -231,8 +231,8 @@ msgid "of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Gener
 msgstr "商品性または特定目的への適合性。詳細については、GNU 一般公衆利用許諾書を参照してください。"
 
 
-msgid "You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/."
-msgstr "このプログラムには GNU 一般公衆利用許諾書のコピーが付属しているはずです。付属していない場合は、https://www.gnu.org/licenses/ を参照してください。"
+msgid "You should have received a copy of the GNU General Public License along with this program. If not, see <a href='https://www.gnu.org/licenses/'>https://www.gnu.org/licenses/</a>."
+msgstr "このプログラムには GNU 一般公衆利用許諾書のコピーが付属しているはずです。付属していない場合は、<a href='https://www.gnu.org/licenses/'>https://www.gnu.org/licenses/</a> を参照してください。"
 
 
 

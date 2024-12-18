@@ -231,8 +231,8 @@ msgid "of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Gener
 msgstr "ΕΜΠΟΡΕΥΣΙΜΟΤΗΤΑΣ ή ΚΑΤΑΛΛΗΛΟΤΗΤΑΣ ΓΙΑ ΣΥΓΚΕΚΡΙΜΕΝΟ ΣΚΟΠΟ. Δείτε τη Γενική Δημόσια Άδεια GNU για περισσότερες λεπτομέρειες."
 
 
-msgid "You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/."
-msgstr "Θα έπρεπε να έχετε λάβει ένα αντίγραφο της Γενικής Δημόσιας Άδειας GNU μαζί με αυτό το πρόγραμμα. Εάν όχι, ανατρέξτε στη διεύθυνση https://www.gnu.org/licenses/."
+msgid "You should have received a copy of the GNU General Public License along with this program. If not, see <a href='https://www.gnu.org/licenses/'>https://www.gnu.org/licenses/</a>."
+msgstr "Θα έπρεπε να έχετε λάβει ένα αντίγραφο της Γενικής Δημόσιας Άδειας GNU μαζί με αυτό το πρόγραμμα. Εάν όχι, ανατρέξτε στη διεύθυνση <a href='https://www.gnu.org/licenses/'>https://www.gnu.org/licenses/</a>."
 
 
 

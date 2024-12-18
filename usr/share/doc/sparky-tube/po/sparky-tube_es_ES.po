@@ -230,8 +230,8 @@ msgid "of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Gener
 msgstr "de COMERCIABILIDAD o IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Consulte la Licencia Pública General de GNU para obtener más detalles."
 
 
-msgid "You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/."
-msgstr "Debería haber recibido una copia de la Licencia Pública General de GNU junto con este programa. Si no es así, consulte https://www.gnu.org/licenses/."
+msgid "You should have received a copy of the GNU General Public License along with this program. If not, see <a href='https://www.gnu.org/licenses/'>https://www.gnu.org/licenses/</a>."
+msgstr "Debería haber recibido una copia de la Licencia Pública General de GNU junto con este programa. Si no es así, consulte <a href='https://www.gnu.org/licenses/'>https://www.gnu.org/licenses/</a>."
 
 
 

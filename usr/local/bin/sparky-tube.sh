@@ -795,7 +795,7 @@ message_text+="\n\n$(gettext "This program is distributed in the hope that it wi
 
 message_text+="\n\n$(gettext "of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.")"
 
-message_text+="\n\n$(gettext "You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/.")"
+message_text+="\n\n$(gettext "You should have received a copy of the GNU General Public License along with this program. If not, see <a href='https://www.gnu.org/licenses/'>https://www.gnu.org/licenses/</a>.")"
 
 
 # Usar gettext para traduzir o texto grande
@@ -804,6 +804,16 @@ message_text+="\n\n$(gettext "You should have received a copy of the GNU General
 # O gettext não esta reconhecendo o uso de \n (quebra de linha) dentro da string de tradução.
 
 # Gettext is not recognizing the use of \n (line break) within the translation string.
+
+
+
+# Para criar um link dentro da mensagem de texto que será exibido pelo yad, você pode usar 
+# a sintaxe do yad para adicionar links clicáveis. A opção --text do yad pode interpretar 
+# links formatados em HTML ou markdown, dependendo da configuração.
+# 
+# No caso de querer incluir um link como o que você mencionou (que vai para a licença GNU), 
+# você pode formatar a string com HTML para tornar o link clicável. Isso seria feito 
+# adicionando o HTML correto dentro do texto que você passa para a variável message_text.
 
 
 # ----------------------------------------------------------------------------------------

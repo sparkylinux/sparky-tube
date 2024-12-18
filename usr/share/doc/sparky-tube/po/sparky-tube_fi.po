@@ -231,8 +231,8 @@ msgid "of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Gener
 msgstr "MYYNTIKELPOISUUDESTA tai SOVELTUVUUDESTA TIETTYYN TARKOITUKSEEN. Katso lisätietoja GNU General Public License -lisenssistä."
 
 
-msgid "You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/."
-msgstr "Sinun olisi pitänyt saada kopio GNU General Public License -lisenssistä tämän ohjelman mukana. Jos ei, katso https://www.gnu.org/licenses/."
+msgid "You should have received a copy of the GNU General Public License along with this program. If not, see <a href='https://www.gnu.org/licenses/'>https://www.gnu.org/licenses/</a>."
+msgstr "Sinun olisi pitänyt saada kopio GNU General Public License -lisenssistä tämän ohjelman mukana. Jos ei, katso <a href='https://www.gnu.org/licenses/'>https://www.gnu.org/licenses/</a>."
 
 
 
@@ -391,7 +391,7 @@ msgstr "Videon laadun pääkriteerit ovat resoluutio ja koodekki."
 
 # sparky-tube.sh:1083
 msgid "Please wait while the audio is downloading."
-msgstr ""
+msgstr "Odota, kun ääni latautuu."
 
 
 # sparky-tube.sh:1147

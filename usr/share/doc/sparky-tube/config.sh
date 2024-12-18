@@ -34,7 +34,29 @@ LANGUAGE_FILES="/usr/share/locale/"
 
 # Definindo a variável com os códigos dos idiomas
 
-idiomas="pt_BR de el en es_ES fi fr hu it ja pl ru uk"
+# Detalhamento dos Códigos:
+
+#     el: Grego
+#     en: Inglês (genérico, sem especificar a região)
+#     es_ES: Espanhol (Espanha)
+#     fi: Finlandês
+#     fr: Francês
+#     hu: Húngaro
+#     it: Italiano
+#     ja: Japonês
+#     pl: Polonês
+#     pt_BR: Português (Brasil)
+#     pt_PT: Português (Portugal)
+#     ru: Russo
+#     uk: Ucraniano
+
+idiomas="pt_BR de el en es_ES fi fr hu it ja pl ru uk pt_PT"
+
+
+
+# echo -e "pt_BR\nel\nen\nes_ES\nfi\nfr\nhu\nit\nja\npl\nru\nuk\npt_PT" | sort | column
+
+# el	en	es_ES	fi	fr	hu	it	ja	pl	pt_BR	pt_PT	ru	uk
 
 
 # Explicação:
@@ -42,6 +64,7 @@ idiomas="pt_BR de el en es_ES fi fr hu it ja pl ru uk"
 #     A variável idiomas contém uma lista de códigos de idiomas.
 #     O loop for percorre cada valor dentro da variável idiomas.
 #     O comando echo -e imprime cada código de idioma, com a possibilidade de usar escape de caracteres, se necessário.
+
 
 # Adicionar ou remover idiomas
 
@@ -182,6 +205,7 @@ echo "2. Remover o programa [root]"
 echo "3. Ajuda"
 echo "4. Corrigir tradução [root]"
 echo "5. Gerar os arquivos .mo com base nos arquivos .po [root]"
+echo "6. Como identificar as mensagens não traduzidas"
 echo "0. Sair"
 echo ""
 read -p "Digite o número da opção desejada: " option
@@ -565,6 +589,108 @@ for lang in $idiomas; do
 done
 
         ;;
+
+
+
+    6)  
+        clear
+
+        echo "Como identificar as mensagens não traduzidas..."
+
+echo "
+Total de arquivos .po atualmente na pasta /usr/share/doc/sparky-tube/po/: $(ls /usr/share/doc/sparky-tube/po/*.po | wc -l)
+"
+
+ls -1 /usr/share/doc/sparky-tube/po/*.po | xargs -n 1 basename
+
+
+echo -e "\n\nQual arquivo .po deseja verificar?"
+read arquivo_po
+
+
+# Verificar se o arquivo .po existe
+
+if [[ ! -f /usr/share/doc/sparky-tube/po/"$arquivo_po" ]]; then
+
+    echo "Erro: O arquivo $arquivo_po não existe."
+
+    exit 1
+fi
+
+
+
+# Usando o grep para encontrar mensagens não traduzidas: Você pode buscar diretamente no 
+# arquivo .po por entradas onde msgstr está vazio, o que indica uma tradução ausente. 
+
+echo -e "\n\nBuscar por mensagens não traduzidas: \n"
+
+# Este comando é útil para localizar traduções vazias (em arquivos .po) que precisam ser preenchidas.
+
+grep -n "msgstr \"\"" /usr/share/doc/sparky-tube/po/"$arquivo_po"
+
+
+# Isso irá listar todas as mensagens que estão faltando a tradução (ou seja, onde o msgstr 
+# está vazio).
+
+
+# Explicação:
+
+#     grep: O grep é uma ferramenta de linha de comando usada para buscar por padrões de texto dentro de arquivos.
+
+#     -n: A opção -n faz com que o grep mostre o número da linha onde o padrão foi encontrado, além do próprio texto da linha.
+
+#     "msgstr \"\"": Este é o padrão de busca.
+#         msgstr: Refere-se à chave msgstr encontrada em arquivos de tradução .po (usados em sistemas de tradução de software, como o Gettext).
+#         \"\": As aspas duplas indicam uma string vazia. Ou seja, o comando está procurando por linhas em que o valor associado à chave msgstr esteja vazio.
+
+#     /usr/share/doc/sparky-tube/po/"$arquivo_po": Este é o caminho do arquivo onde a busca será realizada.
+#         A variável "$arquivo_po" deve conter o nome de um arquivo .po específico, que será concatenado ao caminho para formar o caminho completo do arquivo. O arquivo .po é usado para armazenar traduções de texto em diferentes idiomas em muitos projetos de software.
+
+
+# O que o comando faz:
+
+#     O comando procura no arquivo .po especificado (caminho completo) por todas as linhas que contêm msgstr "", ou seja, linhas onde a tradução (valor de msgstr) está vazia.
+#     Para cada linha encontrada, o comando retornará o número da linha e o conteúdo da linha onde o padrão foi localizado.
+
+
+
+
+
+
+# Usando o msgfmt com --check e --verbose: O comando que você forneceu mostra a quantidade 
+# de mensagens traduzidas e não traduzidas, mas não fornece um detalhamento completo das 
+# mensagens faltantes.
+
+# Para ver o que está faltando, uma alternativa seria usar msgunfmt em vez de msgfmt. O 
+# msgunfmt permite descompilar o arquivo .mo para um arquivo .po legível e então você 
+# pode buscar pelas mensagens não traduzidas.
+
+# msgunfmt /usr/share/locale/en/LC_MESSAGES/sparky-tube.mo -o temp.po
+
+# Isso vai criar um arquivo temp.po, onde você poderá abrir e visualizar as mensagens 
+# não traduzidas.
+
+
+
+# Analisando o arquivo .po: Quando você abrir o arquivo .po resultante, as mensagens não 
+# traduzidas geralmente aparecem com o marcador #, fuzzy ou sem uma tradução na linha msgstr.
+
+
+# Exemplo de uma mensagem não traduzida:
+
+# msgid "Hello, world!"
+# msgstr ""
+
+# Ou com o marcador fuzzy (o que indica que foi traduzido de forma imprecisa):
+
+# msgid "Hello, world!"
+# msgstr "Olá, mundo!"  #, fuzzy
+
+
+        
+
+        ;;
+
 
 
     0)  

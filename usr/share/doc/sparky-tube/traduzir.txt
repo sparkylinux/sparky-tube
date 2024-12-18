@@ -1,12 +1,14 @@
+$ cat sparky-tube_pt_PT.po | grep msgid | sed 's/"//' | sed 's/"//g' | sed 's/msgid //g'
+
 Copy and paste the video address below:
 \nThe URL you entered is invalid!\nPlease check and try again!\n\nExiting...
 Downloading and Converting to: 
-\nYour audio has been successfully saved to 
-\nYour video has been successfully saved to
+Your audio has been successfully saved to 
+Your video has been successfully saved to
 OK
-Exit 
+To go out 
 Choose an audio or video format 
-\nYou have not entered any URL! \n\nExiting... 
+You have not entered any URL!   Exiting... 
 Please wait until complite... 
 Play after downloading 
 ERROR 
@@ -30,8 +32,16 @@ Kernel version
 Processor Architecture 
 YT-DLP Version 
 No player configured. 
-Language 
-Sparky Tube Download a video file from a website and convert it to an audio or video output file.\n\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/ .\n 
+Language
+
+Sparky Tube downloads a video file from a website and converts it into an audio or video output file.
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License. 
+as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. 
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+You should have received a copy of the GNU General Public License along with this program. If not, see <a href='https://www.gnu.org/licenses/'>https://www.gnu.org/licenses/</a>.
+
+
 Playing Video/Audio file... 
 Downloading audio... 
 Logo not found at %s. Check path. 
@@ -56,12 +66,17 @@ Unknown error.
 File name
 Downloading from playlist to
 Using language
-\n\nAudio quality is usually determined by the bit rate (the higher the bit rate, the better the quality).
+Audio quality is usually determined by the bit rate (the higher the bit rate, the better the quality).
+For video quality, the main criteria are resolution and codec.
 Please wait while the audio is downloading.
 Please wait while the video is downloading.
 Downloading video...
 Saving to
 Failed to download video. Please try again later.
+Failed to download audio. Please try again later.
 In \Media Player\ was used: \$PLAYLIST\
 The languages ​​currently supported by the program are
 find program is not installed.
+Error: File name not found!
+Final file name
+
